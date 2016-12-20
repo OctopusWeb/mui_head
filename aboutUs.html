@@ -21,7 +21,18 @@
 		</header>
 		<div class="mui-content">
 		    <div class="us-imgTitle">
-		    	<img src="img/usTop.jpg"/>
+		    	<div class="mui-slider" id="slider">
+				  <div class="mui-slider-group mui-slider-loop">
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/usTop.jpg" /></a></div>
+				  </div>
+				</div>
 		    </div>
 		    <div class="us-title">
 		    	<h1>宗旨：汇聚中国保健专家</h1>
@@ -45,9 +56,8 @@
 			<div><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
 		</div>
 		<script src="js/mui.min.js"></script>
-		<script type="text/javascript">
-			mui.init()
-		</script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript" src="js/aboutUs.js" ></script>
 	</body>
 
 </html>

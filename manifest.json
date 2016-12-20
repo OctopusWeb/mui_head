@@ -189,5 +189,146 @@
 				}
 			}
 		}
+	},
+	"dependencies": {
+		"pages": {
+			"aboutUs.html": {
+				"resources": [
+					"img/aboutImg.jpg",
+					"img/usTop.jpg",
+					"js/aboutUs.js",
+					"css/about.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"classRoom.html": {
+				"resources": [
+					"css/classRoom.css",
+					"img/roomHead.jpg",
+					"fonts/mui.ttf",
+					"js/classRoom.js"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			},
+			"index.html": {
+				"resources": [
+					"img/menu2.png",
+					"css/style.css",
+					"img/4.jpg",
+					"img/menu1.png",
+					"img/menu5.png",
+					"img/bkImg.jpg",
+					"js/pageController.js",
+					"css/index.css",
+					"img/2.jpg",
+					"js/mui.min.js",
+					"img/1.jpg",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"img/menu6.png",
+					"css/iconfont.woff",
+					"img/menu3.png",
+					"img/3.jpg",
+					"img/menu4.png",
+					"js/index.js"
+				],
+				"refer": [
+					"aboutUs.html",
+					"classRoom.html",
+					"doctor.html",
+					"navigation.html",
+					"vip.html",
+					"consult.html"
+				],
+				"priority": 0
+			},
+			"doctor.html": {
+				"resources": [
+					"css/doctor.css",
+					"img/doctorHead.jpg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"img/bkImg.jpg",
+					"js/pageController.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"navigation.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/navigation.css",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"img/bkImg.jpg",
+					"js/pageController.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"vip.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/vip.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"video/1.mp4",
+					"img/bkImg.jpg",
+					"js/pageController.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"consult.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"css/consult.css",
+					"img/bkImg.jpg",
+					"js/pageController.js",
+					"img/doctorHead.jpg"
+				],
+				"refer": [
+					"askPage.html"
+				],
+				"priority": 0
+			},
+			"askPage.html": {
+				"resources": [
+					"css/askPage.css",
+					"img/add.png",
+					"js/askPage.js"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"doctorInfo.html",
+				"css/mui.css",
+				"css/doctorInfo.css",
+				"css/iconfont.ttf",
+				"js/mui.js"
+			]
+		}
 	}
 }

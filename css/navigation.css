@@ -5,7 +5,7 @@ position: absolute;}
 .input-search i{position: absolute;width: 20px;right: 20px;top: 0;font-size: 26px;color: #989897;line-height: 50px;}
 .input-search .iconfont:before{margin: 0;}
 
-.select{width: 50px;z-index: 100;position: absolute;left: 0;}
+.select{width: 50px;z-index: 1;position: absolute;left: 0;}
 .select select{width: 60px;background: none;padding: 0;font-size: 16px;line-height: 45px;padding-left: 10px;
 position: absolute;}
 .select span{position: absolute;line-height: 50px;left: 50px;}
