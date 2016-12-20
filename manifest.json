@@ -259,7 +259,9 @@
 					"img/bkImg.jpg",
 					"js/pageController.js"
 				],
-				"refer": [],
+				"refer": [
+					"doctorInfo.html"
+				],
 				"priority": 0
 			},
 			"navigation.html": {
@@ -319,13 +321,18 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"doctorInfo.html": {
+				"resources": [
+					"css/doctorInfo.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
-				"doctorInfo.html",
 				"css/mui.css",
-				"css/doctorInfo.css",
 				"css/iconfont.ttf",
 				"js/mui.js"
 			]

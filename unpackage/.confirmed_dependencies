@@ -61,6 +61,9 @@
 			"css/iconfont.woff",
 			"img/bkImg.jpg",
 			"js/pageController.js"
+		],
+		"refer": [
+			"doctorInfo.html"
 		]
 	},
 	"navigation.html": {
@@ -112,6 +115,11 @@
 			"css/askPage.css",
 			"img/add.png",
 			"js/askPage.js"
+		]
+	},
+	"doctorInfo.html": {
+		"resources": [
+			"css/doctorInfo.css"
 		]
 	}
 }

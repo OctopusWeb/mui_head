@@ -101,8 +101,8 @@ if(mui(".doctor")){
 function addEvent(num){
 	mui(".doctor")[num].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[5]+".html",
-			id :pageName[5],
+			url:pageName[6]+".html",
+			id :pageName[6],
 			extras:{
 			}
 		});
