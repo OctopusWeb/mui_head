@@ -92,3 +92,20 @@ if(mui(".askBtn")[0]){
 	})
 }
 
+if(mui(".doctor")){
+	for(var i=0;i<mui(".doctor").length;i++){
+		addEvent(i);
+	}
+}
+
+function addEvent(num){
+	mui(".doctor")[num].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[5]+".html",
+			id :pageName[5],
+			extras:{
+			}
+		});
+	})
+}
+
