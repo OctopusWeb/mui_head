@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/navigation.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">健康有限-名医专区</h1>
+		</header>
+		<div class="mui-content">
+			<div class="input-search">
+				<div class="select">
+					<select>
+					  <option value="北京">北京</option>
+					  <option value="测试2">测试2</option>
+					  <option value="测试3">测试3</option>
+					  <option value="测试4">测试4</option>
+					</select>
+					<span class="mui-icon mui-icon-arrowdown"></span>
+				</div>
+				<i class="icon-sousuo iconfont "></i>
+				<input type="text" placeholder="请输入您要搜索的医院名称"/>
+			</div>
+			<div class="hosTitle">
+				<h1>附近医院</h1>
+			</div>
+			<div class="hosList">
+				<div class="hos">
+					<h1>南京军区福州总医院</h1>
+					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+				</div>
+				<div class="hos">
+					<h1>南京军区福州总医院</h1>
+					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+				</div>
+				<div class="hos">
+					<h1>南京军区福州总医院</h1>
+					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+				</div>
+				<div class="hos">
+					<h1>南京军区福州总医院</h1>
+					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+				</div>
+				<div class="hos">
+					<h1>南京军区福州总医院</h1>
+					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+				</div>
+			</div>
+			
+			<div class="footH"></div>
+		</div>
+		<div class="foot mui-bar">
+			<div class="selected"><i class="iconfont icon-shouyeshouye"></i><h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i><h1>档案</h1></div>
+			<div><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
+			<div><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
+		</div>
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script src="js/pageController.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

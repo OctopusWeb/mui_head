@@ -1,0 +1,17 @@
+.input-search{float: left;width: 100%;background: rgba(255,255,255,0.5);height: 50px;position: relative;
+border-top:1px #eae7dd solid ;border-bottom: 1px #eae7dd solid;}
+.input-search input{background: none;border: none;line-height: 50px;height: 50px;padding-left: 75px;
+position: absolute;}
+.input-search i{position: absolute;width: 20px;right: 20px;top: 0;font-size: 26px;color: #989897;line-height: 50px;}
+.input-search .iconfont:before{margin: 0;}
+
+.select{width: 50px;z-index: 1;position: absolute;left: 0;}
+.select select{width: 60px;background: none;padding: 0;font-size: 16px;line-height: 45px;padding-left: 10px;
+position: absolute;}
+.select span{position: absolute;line-height: 50px;left: 50px;}
+
+.videoList{float: left;width: 100%;float: left;}
+.videoList .video{width: 100%;float: left;background: rgba(255,255,255,0.5);margin-top: 5px;}
+.videoList .video .videoBox{width: 94%;height: 180px;margin-left: 3%;overflow: hidden;margin-top: 10px;margin-bottom: 10px;}
+.videoList .video h1{width: 100%;float: left;text-align: left;font-size: 18px;padding-left: 3%;line-height: 18px;}
+.videoList .video h2{width: 100%;float: left;text-align: left;font-size: 14px;font-weight: 400;padding-left: 3%;color: #8C8C8C;}

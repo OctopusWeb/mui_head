@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/doctorInfo.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <i class="icon-iconziti17 iconfont"></i>
+		</header>
+		<div class="mui-content">
+		    <div class="doctorHead">
+		    	<img src="img/doctorHead.jpg"/>
+		    	<h1>陈瑞芳</h1>
+		    	<h2>主任中医师，硕士生导师</h2>
+		    </div>
+		    <div class="doctorInfo">
+		    	<i class="icon-shoucang iconfont"></i>
+		    	<h1>医生简介</h1>
+		    	<p>广州中医药大学第一附属医院体检中心主任，国家中医药管理局重点学科中医预防医学学科带头人，广东省医学会体检医学分会副主任委员，广东省中医药学会慢病管理专业委员会副主任委员，广东省女医师协会女性健康保健专家委员会副主任委员。1987年毕业于广州中医药大学医疗系，主要从事中医预防保健工作及中医健康教育的研究，从事中医养生与中医“治未病”的课题研究，主持中医“治未病”课题3项，发表相关论文20余篇，在广东各大媒体发表科普文章200多篇，是广州电视台及广东新闻台健康节目的特约嘉宾，经常到广东省各地传授中医养生文化，深受广大群众欢迎。临床擅长治疗慢性胃炎、十二指肠球部溃疡、习惯性便秘、慢性结肠炎、失眠等疾病，擅长对亚健康人群的中医调理。</p>
+		    </div>
+		    <div class="bottomBtn">
+		    	<h1><span class="mui-icon mui-icon-chat"></span>我要预约</h1>
+		    </div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

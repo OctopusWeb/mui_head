@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/classRoom.css" />
+	    
+	    <script src="js/mui.min.js"></script>
+	    <script type="text/javascript" src="js/classRoom.js" ></script>
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">保健课堂</h1>
+		</header>
+		
+		<div class="mui-content">
+	    	<div class="mui-slider" id="slider">
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/4.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="img/1.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="img/2.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="img/3.jpg" /></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="img/4.jpg" /></a></div>
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/1.jpg" /></a></div>
+			  </div>
+			  <div class="mui-slider-indicator mui-text-right">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			  </div>
+			</div>
+			<div class="room-list">
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<div class="room">
+					<img src="img/roomHead.jpg"/>
+					<h1>鼻窦炎长期不愈要小心啦 可能会得鼻咽癌鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h1>
+					<h2>鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已鼻窦炎会变鼻癌吗？很多鼻炎患者担心不已</h2>
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+			<div class="footH"></div>
+		</div>
+		
+		<div class="foot mui-bar">
+			<div><i class="iconfont icon-shouyeshouye"></i><h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i><h1>档案</h1></div>
+			<div class="selected"><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
+			<div><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/pageController.js" ></script>
+
+</html>
