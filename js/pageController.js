@@ -100,6 +100,8 @@ if(mui(".doctor")){
 
 function addEvent(num){
 	mui(".doctor")[num].addEventListener("tap",function(){
+		window.localStorage.doctorId = mui(".doctor")[num].id;
+		console.log(localStorage["doctorId"])
 		var webview = mui.openWindow({
 			url:pageName[6]+".html",
 			id :pageName[6],
@@ -108,43 +110,35 @@ function addEvent(num){
 		});
 	})
 }
-var pubUrl="http://114.215.144.251:8888/nzf2/";
-//function getJson(url,data,onComplete){
-//	var xhr = new plus.net.XMLHttpRequest();
-//	xhr.onreadystatechange = function () {
-//		switch ( xhr.readyState ) {
-//			case 0:
-//				alert( "xhr请求已初始化" );
-//			break;
-//			case 1:
-//				alert( "xhr请求已打开" );
-//			break;
-//			case 2:
-//				alert( "xhr请求已发送" );
-//			break;
-//			case 3:
-//				alert( "xhr请求已响应");
-//				break;
-//			case 4:
-//				if ( xhr.status == 200 ) {
-//					onComplete(xhr.responseText)
-//				} else {
-//					alert( "xhr请求失败："+xhr.readyState );
-//				}
-//				break;
-//			default :
-//				break;
-//		}
-//	}
-//	xhr.open( "GET", pubUrl+url);
-//	xhr.send();
-//}
 
 var getJsonAccess = {}
+var pubUrl="http://114.215.144.251:8888/nzf2/";
 getJsonAccess.getJson = function(url,data,onComplete){
-	var data = 	{"result":"true","msg":"","datas":{"banners":[{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."}]},"apk":""}
-	onComplete(data)
+	url = url+data;
+	var xhr = new plus.net.XMLHttpRequest();
+	xhr.onreadystatechange = function () {
+		switch ( xhr.readyState ) {
+			
+			case 4:
+				if ( xhr.status == 200 ) { 
+					onComplete(xhr.responseText)
+				} else {
+					alert( "xhr请求失败："+xhr.readyState );
+				}
+				break;
+			default :
+				break;
+		}
+	}
+	xhr.open( "GET", pubUrl+url);
+	xhr.send();
 }
+
+
+//getJsonAccess.getJson = function(url,data,onComplete){
+//	var data = 	{"result":"true","msg":"","datas":{"banners":[{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."}]},"apk":""}
+//	onComplete(data)
+//}
 getJsonAccess.cacheData = function(strorageJson,onComplete,dom){
 	if(strorageJson && strorageJson!="undefined"){
 		onComplete(JSON.parse(strorageJson));
