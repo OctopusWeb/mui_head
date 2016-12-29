@@ -6,40 +6,28 @@ window.onload = function(){
 	});
 	
 	var bol=0;
-	var bannerDom = mui(".room-list")[0];
-	cacheData(localStorage["classRoom"]);
-	function cacheData(jsonName){
-		if(bol==0){
-			if(!jsonName || jsonName == "undefined"){
-				bol++
-				bannerDom.innerHTML = addBanner('/s/info_banners',"",jsonName);
-			}else{
-				bannerDom.innerHTML = drawHtml(JSON.parse(jsonName));
-				cacheData(jsonName)
-			}
-		}else if(bol == 1){
-			bannerDom.innerHTML = addBanner('/s/info_banners',"",jsonName);
+	var jsonDom = mui(".room-list")[0];
+	statusFun(true);
+	function statusFun(bol){
+		if(bol){
+			getJsonAccess.cacheData(localStorage["infoArticle"],drawHtml,jsonDom);
+			statusFun(false)
 		}else{
-			return
+			getJsonAccess.getJson('/s/info_articles?apk=10000000&type=bjkt',"",drawHtml);
 		}
-	}
-	function addBanner(url,data,jsonName){
-		var jsons = getJson(url,data);
-		var datas = jsons.datas.rds;
-		window.localStorage.classRoom = JSON.stringify(datas);
-		return drawHtml(datas);
 	}
 
-	function drawHtml(datas){
-		bol++;
+	function drawHtml(data){
+		window.localStorage.infoArticle = JSON.stringify(data);
+		var json = data.datas.rds;
 		var index=""
-		for(var i=0;i<datas.length;i++){
+		for(var i=0;i<json.length;i++){
 			index+='<div class="room">'
-			index+='<img src="'+pubUrl+datas[i].image+'"/>'
-			index+='<h1>'+datas[i].title+'</h1>'
-			index+='<h2>'+datas[i].desc+'</h2>'
+			index+='<img src="'+pubUrl+json[i].image+'"/>'
+			index+='<h1>'+json[i].title+'</h1>'
+			index+='<h2>'+json[i].desc+'</h2>'
 			index+='<span class="mui-icon mui-icon-arrowright"></span></div>'
 		}
-		return index
+		jsonDom.innerHTML = index;
 	}
 }
