@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/doctor.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">健康优先-名医专区</h1>
+		</header>
+		<div class="mui-content">
+			<div class="input-search">
+				<i class="icon-sousuo iconfont "></i>
+				<input type="text" placeholder="请输入您要搜索的医生名字" class="search"/>
+			</div>
+			<div class="doctor-list">
+				<!--<div class="doctor">
+					<img src="img/doctorHead.jpg" alt="" />
+					<h1>薛耀明</h1>
+					<h2>教授、主任医师、博士生导师</h2>
+					<h3>南方医科大学南方医院</h3>
+				</div>
+				<div class="doctor">
+					<img src="img/doctorHead.jpg" alt="" />
+					<h1>薛耀明</h1>
+					<h2>教授、主任医师、博士生导师</h2>
+					<h3>南方医科大学南方医院</h3>
+				</div>
+				<div class="doctor">
+					<img src="img/doctorHead.jpg" alt="" />
+					<h1>薛耀明</h1>
+					<h2>教授、主任医师、博士生导师</h2>
+					<h3>南方医科大学南方医院</h3>
+				</div>
+				<div class="doctor">
+					<img src="img/doctorHead.jpg" alt="" />
+					<h1>薛耀明</h1>
+					<h2>教授、主任医师、博士生导师</h2>
+					<h3>南方医科大学南方医院</h3>
+				</div>
+				<div class="doctor">
+					<img src="img/doctorHead.jpg" alt="" />
+					<h1>薛耀明</h1>
+					<h2>教授、主任医师、博士生导师</h2>
+					<h3>南方医科大学南方医院</h3>
+				</div>-->
+				
+			</div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript" src="js/doctor.js" ></script>
+	</body>
+
+</html>
