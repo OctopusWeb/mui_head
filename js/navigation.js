@@ -21,6 +21,7 @@ window.onload = function(){
 
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
+		console.log(JSON.stringify(data))
 		var json = data.datas.rds;
 		var index=''
 		for (var i=0;i<json.length;i++) {

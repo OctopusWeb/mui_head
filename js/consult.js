@@ -11,8 +11,8 @@ window.onload = function(){
 		}else{
 			var data1 = '?apk='+localStorage["apk"]
 			var data2 = '?apk='+localStorage["apk"]+'&uid=f987daf32af145308deb4ac4db777119'
-			getJsonAccess.getJson('/s/question_lists',data1,drawHtml1);
-			getJsonAccess.getJson('/s/question_lists',data2,drawHtml2);
+			getJsonAccess.getJson('s/question_lists',data1,drawHtml1);
+			getJsonAccess.getJson('s/question_lists',data2,drawHtml2);
 		}
 	}
 
@@ -33,6 +33,7 @@ window.onload = function(){
 	}
 	function drawHtml2(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
+		console.log(JSON.stringify(data))
 		var json = data.datas.rds;
 		var index=""
 		for(var i=0;i<json.length;i++){

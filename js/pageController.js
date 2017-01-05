@@ -1,4 +1,5 @@
 var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip"];
+
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
@@ -151,3 +152,5 @@ getJsonAccess.cacheImg = function(dom){
 		imgArr[i].src="img/noneImg.png"
 	}
 }
+
+

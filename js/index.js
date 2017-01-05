@@ -1,7 +1,7 @@
 mui.init();
 window.onload = function(){
 	function plusReady(){
-		window.localStorage.apk = plus.device.imei;
+		window.localStorage.apk = "100000000";
 		plus.geolocation.getCurrentPosition( function ( p ) {
 			window.localStorage.latitude = p.coords.latitude;
 			window.localStorage.longitude = p.coords.longitude;
@@ -26,18 +26,19 @@ window.onload = function(){
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml,jsonDom);
 			setTimeout(function(){statusFun(false)},100);
 		}else{
-			getJsonAccess.getJson('/s/info_banners',"",drawHtml);
+			var data = "?apk="+localStorage["apk"]
+			getJsonAccess.getJson('/s/info_banners',data,drawHtml);
 		}
 	}
 	
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
-		var json = data.datas.banners;
-		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[json.length-1].ba1+'" /></a></div>'
+		var json = data.datas.datas;
+		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[json.length-1].image+'" /></a></div>'
 		for(var i=0;i<json.length;i++){
-			index+='<div class="mui-slider-item"><a href="#"><img src="'+pubUrl+json[i].ba1+'" /></a></div>'
+			index+='<div class="mui-slider-item"><a href="#"><img src="'+pubUrl+json[i].image+'" /></a></div>'
 		}
-		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[0].ba1+'" /></a></div>';
+		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[0].image+'" /></a></div>';
 		jsonDom.innerHTML = index;
 		window.localStorage.banner = JSON.stringify(data);
 	}

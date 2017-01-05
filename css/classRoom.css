@@ -9,3 +9,4 @@ white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hi
 white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;padding-right: 40px; padding-left: 110px;}
 .room-list .room span{position: absolute;right: 0;width: 40px;text-align: center;line-height: 70px;font-size: 30px;}
 #slider{height: 200px;}
+.mui-content{background: none;}

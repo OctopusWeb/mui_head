@@ -24,11 +24,11 @@ window.onload = function(){
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
 		var json = data.datas.about.image;
-		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[json.length-1].src+'" /></a></div>'
+		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[json.length-1].image+'" /></a></div>'
 		for(var i=0;i<json.length;i++){
-			index+='<div class="mui-slider-item"><a href="#"><img src="'+pubUrl+json[i].src+'" /></a></div>'
+			index+='<div class="mui-slider-item"><a href="#"><img src="'+pubUrl+json[i].image+'" /></a></div>'
 		}
-		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[0].src+'" /></a></div>';
+		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[0].image+'" /></a></div>';
 		jsonDom.innerHTML = index;
 		window.localStorage.aboutUs = JSON.stringify(data);
 	}
