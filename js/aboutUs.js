@@ -14,10 +14,10 @@ window.onload = function(){
 	function statusFun(bol){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["aboutUs"],drawHtml,jsonDom);
-			setTimeout(function(){statusFun(false)},10);
+			setTimeout(function(){statusFun(false)},1000);
 		}else{
 			var data = "?apk="+localStorage["apk"]
-			getJsonAccess.getJson('/s/info_about',data,drawHtml); 
+			getJsonAccess.getJson('nzf2/s/info_about',data,drawHtml); 
 		}
 	}
 	

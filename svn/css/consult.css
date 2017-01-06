@@ -22,4 +22,5 @@
 .askBtn{position: fixed;bottom: 10px;height: 50px;line-height:50px;width: 100%;z-index: 100;}
 .askBtn h1{font-size: 20px;width: 100%;text-align: center;line-height: 20px;}
 .askBtn h1 i{color: #6fcadf;font-size: 24px;line-height: 50px;margin-right: 10px;}
+.mui-pull-bottom-tips{background: none;}
 

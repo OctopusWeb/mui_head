@@ -120,7 +120,7 @@ if(mui(".room")){
 
 function addEventR(num){
 	mui(".room")[num].addEventListener("tap",function(){
-		window.localStorage.doctorId = mui(".room")[num].id;
+		window.localStorage.roomId = mui(".room")[num].id;
 		console.log(localStorage["room"])
 		var webview = mui.openWindow({
 			url:pageName[9]+".html",
@@ -157,7 +157,7 @@ if(mui(".hos")){
 
 function addEventH(num){
 	mui(".hos")[num].addEventListener("tap",function(){
-		window.localStorage.doctorId = mui(".hos")[num].id;
+		window.localStorage.hosId = mui(".hos")[num].id;
 		console.log(localStorage["hos"])
 		var webview = mui.openWindow({
 			url:pageName[11]+".html",
@@ -169,9 +169,10 @@ function addEventH(num){
 }
 
 var getJsonAccess = {}
-var pubUrl="http://114.215.144.251:8888/nzf2/";
+var pubUrl="http://114.215.144.251:8888/";
 getJsonAccess.getJson = function(url,data,onComplete){
 	url = url+data;
+	console.log(pubUrl+url)
 	var xhr = new plus.net.XMLHttpRequest();
 	xhr.onreadystatechange = function () {
 		switch ( xhr.readyState ) {
@@ -180,22 +181,18 @@ getJsonAccess.getJson = function(url,data,onComplete){
 				if ( xhr.status == 200 ) { 
 					onComplete(xhr.responseText)
 				} else {
-					alert( "xhr请求失败："+xhr.readyState );
+					mui.toast( "xhr请求失败："+xhr.readyState );
 				}
 				break;
 			default :
 				break;
 		}
 	}
-	xhr.open( "GET", pubUrl+url);
+	xhr.open( "GET",pubUrl+url);
+	
 	xhr.send();
 }
 
-
-//getJsonAccess.getJson = function(url,data,onComplete){
-//	var data = 	{"result":"true","msg":"","datas":{"banners":[{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."},{"ba1":"image/ba1.png","href":"http://...."}]},"apk":""}
-//	onComplete(data)
-//}
 getJsonAccess.cacheData = function(strorageJson,onComplete,dom){
 	if(strorageJson && strorageJson!="undefined"){
 		onComplete(JSON.parse(strorageJson));

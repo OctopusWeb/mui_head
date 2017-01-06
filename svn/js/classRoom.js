@@ -54,15 +54,15 @@ function pulldownRefresh() {
 	function statusFun(bol){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml1,jsonDom1);
-			setTimeout(function(){statusFun(false)},10);
+			setTimeout(function(){statusFun(false)},1000);
 		}else{
 			var data1 = "?apk="+localStorage["apk"]
-			getJsonAccess.getJson('/s/info_banners',data1,drawHtml1);
+			getJsonAccess.getJson('nzf2/s/info_banners',data1,drawHtml1);
 		}
 	}
 	function statusFun1(pgSize,pgCur){
 		var data = '?apk='+localStorage["apk"]+'&type=bjkt'+"&pgSize="+pgSize+"&pgCur="+pgCur
-		getJsonAccess.getJson('/s/info_articles',data,drawHtml);
+		getJsonAccess.getJson('nzf2/s/info_articles',data,drawHtml);
 	}
 
 	function drawHtml(data){
@@ -75,7 +75,7 @@ function pulldownRefresh() {
 		}
 		
 		for(var i=0;i<json.length;i++){
-			index+='<div class="room">'
+			index+='<div class="room" id="'+json[i].tid+'">'
 			index+='<img src="'+pubUrl+json[i].image+'"/>'
 			index+='<h1>'+json[i].title+'</h1>'
 			index+='<h2>'+json[i].desc+'</h2>'

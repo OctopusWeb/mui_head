@@ -1,4 +1,4 @@
-#slider{margin-top: 0;padding-top: 0;float: left;}
+#slider{margin-top: 0;padding-top: 0;float: left;height: 200px;overflow: hidden;}
 .mui-slider-indicator{width: 100px;left: 50%;margin-left: -50px;}
 .mui-slider-indicator .mui-active.mui-indicator{background: #a4cf52;}
 

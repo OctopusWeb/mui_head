@@ -24,10 +24,10 @@ window.onload = function(){
 	function statusFun(bol){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml,jsonDom);
-			setTimeout(function(){statusFun(false)},100);
+			setTimeout(function(){statusFun(false)},1000);
 		}else{
 			var data = "?apk="+localStorage["apk"]
-			getJsonAccess.getJson('/s/info_banners',data,drawHtml);
+			getJsonAccess.getJson('nzf2/s/info_banners',data,drawHtml);
 		}
 	}
 	
