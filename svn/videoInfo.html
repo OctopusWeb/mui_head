@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>VIP</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/videoInfo.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">健康优先-VIP视频问诊</h1>
+		</header>
+		<div class="mui-content">
+			<div class="content">
+				<div class="videoBox">
+					<video width="100%" height="auto">
+						<source src="video/1.mp4" type="video/mp4"></source>
+					</video>
+				</div>
+				<h1>抗高血压药--你用对了么</h1>
+				<p>下载视频</p>
+				<span>杨医生  2026-12-20</span>
+				<h2 class="content-info">抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么抗高血压药--你用对了么</h2>
+				<div class="openBtn Btn">展开阅读全文</div>
+				<div class="closeBtn Btn">收起全文</div>
+			</div>
+			<div class="contentList">
+				<h2>相关推荐</h2>
+				<div class="list">
+					<img src="img/1.jpg"/>
+					<h1>抗高血压药--你用对了么</h1>
+					<span>2016-08-04</span>
+				</div>
+				<div class="list">
+					<img src="img/1.jpg"/>
+					<h1>抗高血压药--你用对了么</h1>
+					<span>2016-08-04</span>
+				</div>
+				<div class="list">
+					<img src="img/1.jpg"/>
+					<h1>抗高血压药--你用对了么</h1>
+					<span>2016-08-04</span>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			window.onload = function(){
+				mui(".openBtn")[0].addEventListener("tap",function(){
+					mui(".content-info")[0].style.height = "auto";
+					mui(".closeBtn")[0].style.display = "block"
+					mui(".openBtn")[0].style.display = "none"
+				});
+				mui(".closeBtn")[0].addEventListener("tap",function(){
+					mui(".content-info")[0].style.height = "72px";
+					mui(".openBtn")[0].style.display = "block"
+					mui(".closeBtn")[0].style.display = "none"
+				})
+			}
+		</script>
+	</body>
+
+</html>

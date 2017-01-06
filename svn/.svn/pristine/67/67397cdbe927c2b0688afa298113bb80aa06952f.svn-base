@@ -28,7 +28,7 @@ window.onload = function(){
 		}
 		jsonDom.innerHTML = index;
 		for(var i=0;i<mui(".doctor").length;i++){
-			addEventD(i);
+			addEvent(i);
 		}
 		window.localStorage.doctor = JSON.stringify(data);
 	}
