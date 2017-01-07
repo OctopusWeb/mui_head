@@ -1,4 +1,3 @@
-
 window.onload = function(){
 	mui.init({
 		pullRefresh: {
@@ -12,6 +11,7 @@ window.onload = function(){
 			}
 		}
 	});
+
 	var page=1;
 	var type = false;
 	var jsonDom = mui(".doctor-list")[0];
@@ -36,7 +36,7 @@ window.onload = function(){
 				type = false;
 				statusFun(false,page++);
 				mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
-		}, 1500);
+		}, 500);
 	}
 	if (mui.os.plus) {
 		mui.plusReady(function() {

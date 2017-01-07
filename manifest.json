@@ -207,7 +207,18 @@
 					"css/classRoom.css",
 					"img/roomHead.jpg",
 					"fonts/mui.ttf",
-					"js/classRoom.js"
+					"js/classRoom.js",
+					"img/noneImg.png",
+					"css/style.css",
+					"img/4.jpg",
+					"js/pageController.js",
+					"img/bkImg.jpg",
+					"img/2.jpg",
+					"js/mui.min.js",
+					"img/1.jpg",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"img/3.jpg"
 				],
 				"refer": [
 					"index.html"
@@ -235,7 +246,9 @@
 					"img/3.jpg",
 					"img/menu4.png",
 					"js/index.js",
-					"css/iconfont.ttf"
+					"css/iconfont.ttf",
+					"img/banner.png",
+					"img/noneImg.png"
 				],
 				"refer": [
 					"aboutUs.html",
@@ -258,7 +271,8 @@
 					"css/style.css",
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
-					"js/pageController.js"
+					"js/pageController.js",
+					"js/doctor.js"
 				],
 				"refer": [
 					"doctorInfo.html"
@@ -275,9 +289,12 @@
 					"css/style.css",
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
-					"js/pageController.js"
+					"js/pageController.js",
+					"js/navigation.js"
 				],
-				"refer": [],
+				"refer": [
+					"location.html"
+				],
 				"priority": 0
 			},
 			"vip.html": {
@@ -307,7 +324,11 @@
 					"css/consult.css",
 					"img/bkImg.jpg",
 					"js/pageController.js",
-					"img/doctorHead.jpg"
+					"img/doctorHead.jpg",
+					"js/consult.js",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js",
+					"img/noneImg.png"
 				],
 				"refer": [
 					"askPage.html"
@@ -325,7 +346,25 @@
 			},
 			"doctorInfo.html": {
 				"resources": [
-					"css/doctorInfo.css"
+					"css/doctorInfo.css",
+					"js/doctorInfo.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"img/noneImg.png",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"img/bkImg.jpg",
+					"js/pageController.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"location.html": {
+				"resources": [
+					"css/location.css",
+					"js/location.js"
 				],
 				"refer": [],
 				"priority": 0
