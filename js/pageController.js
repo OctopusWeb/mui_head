@@ -1,4 +1,4 @@
-var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location"];
+var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc"];
 
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
@@ -92,6 +92,16 @@ if(mui(".askBtn")[0]){
 		});
 	})
 }
+if(mui(".yuyue")[0]){
+	mui(".yuyue")[0].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[12]+".html",
+			id :pageName[12],
+			extras:{
+			}
+		});
+	})
+}
 
 if(mui(".doctor")){
 	for(var i=0;i<mui(".doctor").length;i++){
@@ -154,6 +164,7 @@ if(mui(".hos")){
 		addEventH(i);
 	}
 }
+
 
 function addEventH(num){
 	mui(".hos")[num].addEventListener("tap",function(){

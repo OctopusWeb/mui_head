@@ -1,4 +1,4 @@
-var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location"];
+var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc"];
 
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
@@ -92,6 +92,16 @@ if(mui(".askBtn")[0]){
 		});
 	})
 }
+if(mui(".yuyue")[0]){
+	mui(".yuyue")[0].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[12]+".html",
+			id :pageName[12],
+			extras:{
+			}
+		});
+	})
+}
 
 if(mui(".doctor")){
 	for(var i=0;i<mui(".doctor").length;i++){
@@ -155,6 +165,7 @@ if(mui(".hos")){
 	}
 }
 
+
 function addEventH(num){
 	mui(".hos")[num].addEventListener("tap",function(){
 		window.localStorage.hosId = mui(".hos")[num].id;
@@ -172,6 +183,7 @@ var getJsonAccess = {}
 var pubUrl="http://114.215.144.251:8888/";
 getJsonAccess.getJson = function(url,data,onComplete){
 	url = url+data;
+	console.log(pubUrl+url)
 	var xhr = new plus.net.XMLHttpRequest();
 	xhr.onreadystatechange = function () {
 		switch ( xhr.readyState ) {
@@ -187,7 +199,7 @@ getJsonAccess.getJson = function(url,data,onComplete){
 				break;
 		}
 	}
-	xhr.open( "GET", pubUrl+url);
+	xhr.open( "GET",pubUrl+url);
 	
 	xhr.send();
 }
