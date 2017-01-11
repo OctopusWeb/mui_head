@@ -1,8 +1,5 @@
 {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e4ae09c43994df8676050eebbe5249b00f390757
   "aboutUs.html": {
     "resources": [
       "img/aboutImg.jpg",
@@ -195,8 +192,6 @@
       "order_doc_sub.html"
     ]
   }
-<<<<<<< HEAD
-=======
 =======
 	"aboutUs.html": {
 		"resources": [
@@ -361,5 +356,4 @@
 		]
 	}
 >>>>>>> cddaa73ce91faf935fa1c7c83444bd6109afebc9
->>>>>>> e4ae09c43994df8676050eebbe5249b00f390757
 }
