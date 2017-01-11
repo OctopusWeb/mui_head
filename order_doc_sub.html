@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/iconfont1.css" />
+		<link rel="stylesheet" href="css/doctorInfo.css" />
+		<style>
+			.mui-bar-nav{
+				box-shadow: none;
+				-webkit-box-shadow: none;
+			}
+			.mui-bar{background: none;}
+			.mui-bar-nav.mui-bar .mui-icon{
+				color: #333333;
+			}
+			.mui-content{
+				background: url(img/bkImg.jpg) repeat;
+			}
+			.mui-bar-nav~.mui-content{
+				padding: 0;
+			}
+			.order-list{
+				float:left;
+				width: 100%;
+				background: #FFFFFF;
+			}
+			.order-list .tab-title-container{
+				position: relative;
+				padding: 0 25px;
+				background: #F7F7F7;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			.order-list .if-zuo,.order-list .if-gengduo{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				font-size: 20px;
+				color: #999999;
+			}
+			.order-list .if-gengduo{
+				left: auto;
+				right: 10px;
+			}
+			.order-list-inner{
+				width: 100%;
+				overflow: hidden;
+				box-sizing: border-box;
+			}
+			.order-list ul.tab-title {
+				list-style: none;
+				position: relative;
+				width: 100%;		
+				padding: 0;
+				margin: 0;
+			}
+			.order-list .tab-title li{
+				width: 25%;
+				float:left;
+				padding: 5px 0;
+			}
+			.order-list .tab-title li.active p,.order-list .tab-title li.active span{
+				color: #a07d3f;
+			}
+			.order-list .tab-title li p,.order-list .tab-title li span{
+				width: 100%;
+				display: block;
+				color: #999999;
+				font-size: 12px;
+				margin: 0;
+				text-align: center;
+				line-height: 15px;
+			}
+			.tab-content-item{
+				width: 100%;
+				display: none;
+			}
+			.tab-content-item.active{
+				display: block;
+			}
+			.tab-content ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.tab-content li{
+				position: relative;
+				height: 40px;
+				line-height: 40px;
+				padding: 0 10px;
+				padding-right: 80px;
+			}
+			.tab-content li p{
+				height: 40px;
+				line-height: 40px;
+			}
+			.tab-content li p i{
+				margin-right: 5px;
+				position: relative;
+				top:1px;
+			}
+			.tab-content li button{
+				height: 20px;
+				width: 60px;
+				border: none;
+				position: absolute;
+				right: 10px;
+				font-size: 12px;
+				color: #FFFFFF;
+				background: #c6c6c6;
+				line-height: 20px;
+				padding: 0;
+				top: 10px;
+			}
+			.tab-content li:nth-child(even){
+				background: #F7F7F7;
+			}
+			.tab-content li button.order{
+				background: #176de3;
+			}
+			.tab-content li button.ordered{
+				background: #08c975;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		</header>
+		
+		<div class="mui-content mui-clearfix">
+		    <div class="doctorHead">
+		    	<img src="img/doctorHead.jpg"/>
+		    	<h1>陈瑞芳</h1>
+		    	<h2>主任中医师，硕士生导师</h2>
+		    </div>
+		    <div class="order-list" id="olist">
+		    	<div class="tab-title-container">
+		    		<i class="icon if if-zuo pre-btn"></i>
+			    	<i class="icon if if-gengduo nxt-btn"></i>
+			    	<div class="order-list-inner">
+				    	<ul class="mui-clearfix tab-title dataTime">
+				    		<li class="order-date active" data-target="content0">
+				    			<p>12月21日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content1">
+				    			<p>12月22日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content2">
+				    			<p>12月23日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content3">
+				    			<p>12月24日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content4">
+				    			<p>12月25日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content5">
+				    			<p>12月26日</p>
+				    			<span>周日</span>
+				    		</li>
+				    		<li class="order-date" data-target="content6">
+				    			<p>12月27日</p>
+				    			<span>周日</span>
+				    		</li>
+				    	</ul>
+			    	</div>
+		    	</div>
+		    	<div class="tab-content">
+		    		<div class="tab-content-item active" id="content0">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content1">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>09:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content2">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>10:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content3">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content4">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content5">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item" id="content6">
+		    			<ul>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button>已满</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="order">预约</button>
+		    				</li>
+		    				<li>
+		    					<p><i class="icon if if-zhong"></i>08:00 - 09:00</p>
+		    					<button class="ordered">已选择</button>
+		    				</li>
+		    			</ul>
+		    		</div>
+		    		<div class="tab-content-item active" id="content6">
+		    	</div>
+		    </div>
+		</div>
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script>
+			(function(doc, exportName) {
+				var _console = window.console && window.console.log;
+				var PREFIX = ['webkit', 'moz', 'ms', ''];
+				var $ = function(dom) {
+					if((typeof dom).toLowerCase() != "object") {
+						if(_console) {
+							console.error('nelsonVS()所传入的元素无法执行此操作')
+						}
+						return;
+					};
+					this.d = dom.querySelector(".tab-title");
+					this.titles = this.d.children;
+					this.titleItemWidth = this.titles[0].offsetWidth;
+					this.count = this.titles.length;
+					this.contents = dom.querySelectorAll(".tab-content-item");
+					this.preBtn = dom.querySelector(".pre-btn");
+					this.nxtBtn = dom.querySelector(".nxt-btn");
+					this.init();
+				}
+				$.prototype = {
+					index:0,
+					init:function(){
+						this.d.style.width = this.titleItemWidth * this.count + "px";
+						for(var i = 0 ; i < this.titles.length ; i++){
+							this.titles[i].style.width = 100 / this.count + "%";
+						}
+						this.bindEvt();
+					},
+					bindEvt:function(){
+						var _this = this;
+						this.preBtn.addEventListener("tap",function(){
+							_this.movePage("pre");
+						})
+						this.nxtBtn.addEventListener("tap",function(){
+							_this.movePage("nxt");
+						})
+						mui(".tab-title").on("tap","li",function(){
+							for(var i = 0 ; i < _this.titles.length ; i++){
+								_this.titles[i].classList.remove("active");
+								_this.contents[i].classList.remove("active");
+							}
+							this.classList.add("active");
+							document.getElementById(this.getAttribute('data-target')).classList.add("active");
+						})
+					},
+					movePage:function(type){
+						var _this = this;
+						if(type == 'pre'){
+							if(_this.index == 0){
+								return;
+							}
+							_this.index -= 1;
+						}else if(type == 'nxt'){
+							if(_this.index == _this.count - 4){
+								return;
+							}
+							_this.index += 1;
+						}
+						for(var i = 0 ; i < PREFIX.length ; i++){
+							this.d.style[PREFIX[i] + 'TransitionDuration'] = "300ms";
+							this.d.style[PREFIX[i] + "Transform"] = "translateX(" + (-_this.index * _this.titleItemWidth) + "px)";
+						}
+					}
+				}
+			
+				function TAB(dom) {
+					return new $(dom);
+				}
+			
+				window[exportName] = TAB;
+			
+			})(document, 'tab');
+				
+			var _tab = new tab(document.getElementById("olist"))
+		</script>
+		<!--<script type="text/javascript">
+			mui.init()
+			window.onload = function(){
+				var jsonDom = mui(".mui-content")[0];
+				statusFun(true);
+				function statusFun(bol){
+					if(bol){
+						getJsonAccess.cacheData(localStorage["doctorOrder"],drawHtml,jsonDom);
+						setTimeout(function(){statusFun(false)},1000);
+					}else{
+						var data = "?apk="+localStorage["apk"]+"&did="+localStorage["doctorId"]+"&sdate="+20170101+"&edate="+20170107
+						getJsonAccess.getJson('nzf2/s/dr_orders',data,drawHtml); 
+					}
+				}
+				
+				function drawHtml(data){
+					if(typeof(data) == "string"){data = JSON.parse(data)}
+					var json = data.datas.rds
+					var index1="";
+					index1+='<img src="'+localStorage["doctorPic"]+'"/>'
+					index1+='<h1>'+localStorage["doctorName"]+'</h1>'
+					index1+='<h2>'+localStorage["doctorHonor"]+'</h2>'
+					
+					
+					var index2="";
+					var index3="";
+					for (var i=0;i<json.length;i++) {
+						index2+='<li class="order-date" data-target="content'+i+'">'
+						index2+='<p>'+json[i].date+'</p>'
+						index2+='<span>周日</span></li>'	
+						
+						index3+='<div class="tab-content-item" id="content'+i+'">'
+						index3+='<ul><li><p><i class="icon if if-zhong"></i>'+json[i].time+'</p>'
+						if(json[i].status == 0){
+							index3+='<button class="order">预约</button>'
+						}else if(json[i].status == 1){
+							index3+='<button>已满</button>'
+						}else if(json[i].status == 2){
+							index3+='<button class="ordered">已选择</button>'
+						}
+		    			index3+='</li></ul></div></div>'
+					}
+					jsonDom.getElementsByClassName("doctorHead")[0].innerHTML = index1;
+					jsonDom.getElementsByClassName("dataTime")[0].innerHTML = index2;
+					jsonDom.getElementsByClassName("tab-content")[0].innerHTML = index3;
+					window.localStorage.doctorOrder = JSON.stringify(data);
+				}
+				function bindEvent(dom){
+					dom.addEventListener("tap",function(){
+						dom.className = "ordered";
+					})
+				}
+			}
+		</script>-->
+	</body>
+
+</html>

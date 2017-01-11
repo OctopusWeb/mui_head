@@ -10,7 +10,10 @@
 	    <link rel="stylesheet" href="css/iconfont.css">
 	    <link rel="stylesheet" href="css/navigation.css" />
 	</head>
-
+	<style type="text/css">
+		#pullrefresh{position:absolute;width:100%!important;top:165px;padding-bottom:60px;}
+		.mui-pull-top-pocket{margin-top: 120px !important;}
+	</style>
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
@@ -33,27 +36,31 @@
 			<div class="hosTitle">
 				<h1>附近医院</h1>
 			</div>
-			<div class="hosList">
-				<!--<div class="hos">
-					<h1>南京军区福州总医院</h1>
-					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+			<div class="hosList mui-content mui-scroll-wrapper" id="pullrefresh">
+				<div class="mui-scroll">
+					<div class="doctor-list mui-table-view mui-table-view-chevron">
+						<!--<div class="hos">
+							<h1>南京军区福州总医院</h1>
+							<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+						</div>
+						<div class="hos">
+							<h1>南京军区福州总医院</h1>
+							<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+						</div>
+						<div class="hos">
+							<h1>南京军区福州总医院</h1>
+							<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+						</div>
+						<div class="hos">
+							<h1>南京军区福州总医院</h1>
+							<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+						</div>
+						<div class="hos">
+							<h1>南京军区福州总医院</h1>
+							<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
+						</div>-->
+					</div>		
 				</div>
-				<div class="hos">
-					<h1>南京军区福州总医院</h1>
-					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
-				</div>
-				<div class="hos">
-					<h1>南京军区福州总医院</h1>
-					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
-				</div>
-				<div class="hos">
-					<h1>南京军区福州总医院</h1>
-					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
-				</div>
-				<div class="hos">
-					<h1>南京军区福州总医院</h1>
-					<h2>三级甲等</h2><h2>中风筛查</h2><h2><i class="icon-dingwei iconfont"></i>0.5km</h2>
-				</div>-->
 			</div>
 			
 			<div class="footH"></div>
@@ -64,12 +71,10 @@
 			<div><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
 			<div><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
 		</div>
-		
-		
+
 		<script src="js/mui.min.js"></script>
 		<script src="js/pageController.js"></script>
 		<script type="text/javascript" src="js/navigation.js" ></script>
-		
 	</body>
 
 </html>

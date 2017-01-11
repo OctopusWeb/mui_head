@@ -165,9 +165,9 @@
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "splash/I320.png", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "splash/I640-960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "splash/I640.png","retina55":"splash/I2280.png","retina47":"splash/I750.png"
+						 /*iPhone3启动图片选，分辨率：320x480*/
+						/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						
 					},
 					"ipad": {
 						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
@@ -181,11 +181,11 @@
 					}
 				},
 				"android": {
-					"mdpi": "splash/A240.png", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "splash/A320.png", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "splash/A480.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "splash/A720.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "splash/A1080.png"
+					 /*普通屏启动图片，分辨率：240x282*/
+					 /*大屏启动图片，分辨率：320x442*/
+					 /*高分屏启动图片，分辨率：480x762*/
+					 /*720P高分屏启动图片，分辨率：720x1242*/
+					
 				}
 			}
 		}
@@ -207,7 +207,18 @@
 					"css/classRoom.css",
 					"img/roomHead.jpg",
 					"fonts/mui.ttf",
-					"js/classRoom.js"
+					"js/classRoom.js",
+					"img/noneImg.png",
+					"css/style.css",
+					"img/4.jpg",
+					"js/pageController.js",
+					"img/bkImg.jpg",
+					"img/2.jpg",
+					"js/mui.min.js",
+					"img/1.jpg",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"img/3.jpg"
 				],
 				"refer": [
 					"index.html"
@@ -235,7 +246,9 @@
 					"img/3.jpg",
 					"img/menu4.png",
 					"js/index.js",
-					"css/iconfont.ttf"
+					"css/iconfont.ttf",
+					"img/banner.png",
+					"img/noneImg.png"
 				],
 				"refer": [
 					"aboutUs.html",
@@ -258,7 +271,9 @@
 					"css/style.css",
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
-					"js/pageController.js"
+					"js/pageController.js",
+					"js/doctor.js",
+					"css/iconfont.ttf"
 				],
 				"refer": [
 					"doctorInfo.html"
@@ -275,9 +290,12 @@
 					"css/style.css",
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
-					"js/pageController.js"
+					"js/pageController.js",
+					"js/navigation.js"
 				],
-				"refer": [],
+				"refer": [
+					"location.html"
+				],
 				"priority": 0
 			},
 			"vip.html": {
@@ -307,7 +325,11 @@
 					"css/consult.css",
 					"img/bkImg.jpg",
 					"js/pageController.js",
-					"img/doctorHead.jpg"
+					"img/doctorHead.jpg",
+					"js/consult.js",
+					"js/mui.pullToRefresh.js",
+					"js/mui.pullToRefresh.material.js",
+					"img/noneImg.png"
 				],
 				"refer": [
 					"askPage.html"
@@ -325,7 +347,54 @@
 			},
 			"doctorInfo.html": {
 				"resources": [
-					"css/doctorInfo.css"
+					"css/doctorInfo.css",
+					"js/doctorInfo.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"img/noneImg.png",
+					"css/mui.min.css",
+					"css/style.css",
+					"css/iconfont.woff",
+					"img/bkImg.jpg",
+					"js/pageController.js",
+					"css/iconfont.ttf"
+				],
+				"refer": [
+					"order_doc.html"
+				],
+				"priority": 0
+			},
+			"location.html": {
+				"resources": [
+					"css/location.css",
+					"js/location.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"order_doc_sub.html": {
+				"resources": [
+					"css/iconfont1.ttf",
+					"css/iconfont1.css",
+					"img/doctorHead.jpg",
+					"css/doctorInfo.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/bkImg.jpg",
+					"js/pageController.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"order_doc.html": {
+				"resources": [
+					"order_doc_sub.html",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
