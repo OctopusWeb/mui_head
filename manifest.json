@@ -272,8 +272,12 @@
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
 					"js/pageController.js",
+<<<<<<< HEAD
 					"js/doctor.js",
 					"css/iconfont.ttf"
+=======
+					"js/doctor.js"
+>>>>>>> cddaa73ce91faf935fa1c7c83444bd6109afebc9
 				],
 				"refer": [
 					"doctorInfo.html"
@@ -357,18 +361,25 @@
 					"css/style.css",
 					"css/iconfont.woff",
 					"img/bkImg.jpg",
+<<<<<<< HEAD
 					"js/pageController.js",
 					"css/iconfont.ttf"
 				],
 				"refer": [
 					"order_doc.html"
 				],
+=======
+					"js/pageController.js"
+				],
+				"refer": [],
+>>>>>>> cddaa73ce91faf935fa1c7c83444bd6109afebc9
 				"priority": 0
 			},
 			"location.html": {
 				"resources": [
 					"css/location.css",
 					"js/location.js"
+<<<<<<< HEAD
 				],
 				"refer": [],
 				"priority": 0
@@ -395,6 +406,8 @@
 					"css/iconfont.css",
 					"css/mui.min.css",
 					"fonts/mui.ttf"
+=======
+>>>>>>> cddaa73ce91faf935fa1c7c83444bd6109afebc9
 				],
 				"refer": [],
 				"priority": 0
