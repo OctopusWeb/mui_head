@@ -20,10 +20,11 @@ window.onload = function(){
 		var data = '?apk='+localStorage["apk"]+"&dname="+search.value+'&pgSize=5&pgCur='+1;
 		getJsonAccess.getJson('nzf2/s/dr_lists',data,drawHtml);
 	})
+	statusFun(true,1);
 	function pulldownRefresh() {
 		setTimeout(function() {
 				type = true;
-				statusFun(true,5);
+				statusFun(true,1);
 				page = 1;
 				mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 		}, 1500);

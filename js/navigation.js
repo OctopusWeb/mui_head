@@ -17,14 +17,15 @@ window.onload = function(){
 	var selected = mui(".selected")[0];
 	var page=1;
 	var type = false;
+	statusFun(true,1);
 	search.addEventListener("change",function(){
 		var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&name='+search.value+'&city='+selected.value;
-		getJsonAccess.getJson('nzf2/s/jcd_lists',data,drawHtml);
+		getJsonAccess.getJson('tgj/s/jcd_lists',data,drawHtml);
 	})	
 	function pulldownRefresh() {
 		setTimeout(function() {
 			type = true;
-			statusFun(true,5);
+			statusFun(true,1);
 			page = 1;
 			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 		}, 1500);
@@ -59,7 +60,7 @@ window.onload = function(){
 			setTimeout(function(){statusFun(false,pages)},1000);
 		}else{
 			var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&pgSize=5&pgCur='+pages
-			getJsonAccess.getJson('nzf2/s/jcd_lists',data,drawHtml);
+			getJsonAccess.getJson('tgj/s/jcd_lists',data,drawHtml);
 		}
 	}
 
