@@ -39,5 +39,5 @@ font-weight: 400;border-bottom: 1px #ccc solid;}
 .mineInfo .chartBox h1{width: 100%;text-align: center;line-height: 40px;color: #666;font-size: 18px;top: 220px;position: absolute;}
 .mineInfo .chartBox h2{width: 100%;text-align: center;line-height: 40px;color: #666;font-size: 18px;top: 250px;position: absolute;}
 #gauge-ps{width: 50%;position: absolute;top: 20px;margin-left: 50%;left: -100px;}
-.mineInfo .chartBox1{height: 300px;}
+.mineInfo .chartBox1{height: 300px;position: relative;}
 #gauge-ps1{width: 50%;position: absolute;top: 20px;margin-left: 50%;left: -100px;}

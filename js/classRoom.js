@@ -79,7 +79,7 @@ function pulldownRefresh() {
 		
 		for(var i=0;i<json.length;i++){
 			index+='<div class="room" id="'+json[i].tid+'">'
-			index+='<img src="'+pubUrl+json[i].image+'"/>'
+			index+='<img src="'+json[i].image+'"/>'
 			index+='<h1>'+json[i].title+'</h1>'
 			index+='<h2>'+json[i].desc+'</h2>'
 			index+='<span class="mui-icon mui-icon-arrowright"></span></div>'
