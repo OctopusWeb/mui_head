@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/mineInfo.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <i class="icon-iconziti17 iconfont"></i>
+		</header>
+		<div class="mui-content">
+		    <div class="mineHead">
+		    	<img src="img/doctorHead.jpg"/>
+		    	<h1>陈瑞芳</h1>
+		    </div>
+		    <div class="mineTitle">
+		    	<p class="selected">我的档案</p>
+		    	<p>脑公分</p>
+		    	<p>危险因素</p>
+		    	<p>建议处方</p>
+		    </div>
+		    <div class="mineInfo">
+		    	<div class="infoList selected">
+		    		<div class="list">
+		    			<p>性别</p>
+		    			<span>男</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>民族</p>
+		    			<span>汉</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>出生日期</p>
+		    			<span>1975-01-11</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>地址</p>
+		    			<span>福建省 福州市 鼓楼区 江南路564号</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>证件类型</p>
+		    			<span>身份证</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>证件号码</p>
+		    			<span>12345678912345678</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>联系电话</p>
+		    			<span>1234567891</span>
+		    		</div>
+		    		<div class="chartBox">
+		    			
+		    		</div>
+		    	</div>
+		    	<div class="infoList">2</div>
+		    	<div class="infoList">3</div>
+		    	<div class="infoList">4</div>
+		    </div>
+		</div>
+		<div class="foot mui-bar">
+			<div><i class="iconfont icon-shouyeshouye"></i><h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i><h1>档案</h1></div>
+			<div><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
+			<div class="selected"><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var $title = mui(".mineTitle");
+				for (var i=0;i<$title.length;i++) {
+					addEvent(i);
+				}
+				function addEvent(i){
+					$title[i].addEventListener("tap",function(){
+						alert(i)
+					})
+				}
+			}
+		</script>
+	</body>
+
+</html>

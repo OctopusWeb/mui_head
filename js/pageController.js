@@ -200,7 +200,6 @@ getJsonAccess.getJson = function(url,data,onComplete){
 		}
 	}
 	xhr.open( "GET",pubUrl+url);
-	
 	xhr.send();
 }
 

@@ -6,7 +6,7 @@ window.onload = function(){
 			window.localStorage.latitude = p.coords.latitude;
 			window.localStorage.longitude = p.coords.longitude;
 		}, function ( e ) {
-			mui.toast( "Geolocation error: " + e.message );
+			mui.toast( "请打开定位功能" );
 		} );
 	}
 	if(window.plus){
@@ -33,12 +33,12 @@ window.onload = function(){
 	
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
-		var json = data.datas.datas;
-		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[json.length-1].image+'" /></a></div>'
+		var json = data.datas.banners;
+		var index = '<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+json[json.length-1].href+'" /></a></div>'
 		for(var i=0;i<json.length;i++){
-			index+='<div class="mui-slider-item"><a href="#"><img src="'+pubUrl+json[i].image+'" /></a></div>'
+			index+='<div class="mui-slider-item"><a href="#"><img src="'+json[i].href+'" /></a></div>'
 		}
-		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+pubUrl+json[0].image+'" /></a></div>';
+		index+='<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="'+json[0].href+'" /></a></div>';
 		jsonDom.innerHTML = index;
 		window.localStorage.banner = JSON.stringify(data);
 	}
