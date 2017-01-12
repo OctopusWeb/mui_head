@@ -15,7 +15,6 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <i class="icon-iconziti17 iconfont"></i>
 		</header>
 		<div class="mui-content">
 		    <div class="mineHead">
@@ -62,9 +61,63 @@
 		    			
 		    		</div>
 		    	</div>
-		    	<div class="infoList">2</div>
-		    	<div class="infoList">3</div>
-		    	<div class="infoList">4</div>
+		    	<div class="infoList">
+		    		<div class="chartBox"></div>
+		    		<div class="list2box">
+		    			<h1>历史评估</h1>
+		    			<div>
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    			<div class="selected2">
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    			<div>
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="infoList">
+		    		<div class="list">
+		    			<p>吸烟</p>
+		    			<span class="redP">有</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>饮酒</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑出血</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑梗死</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>吸烟</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>饮酒</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑出血</p>
+		    			<span>无</span>
+		    		</div>
+		    		
+		    	</div>
+		    	<div class="infoList">
+		    		<div class="list3box">
+		    			
+		    		</div>
+		    	</div>
 		    </div>
 		</div>
 		<div class="foot mui-bar">
@@ -77,14 +130,23 @@
 		<script type="text/javascript" src="js/pageController.js" ></script>
 		<script type="text/javascript">
 			window.onload = function(){
-				var $title = mui(".mineTitle");
+				var $title = mui(".mineTitle p");
+				var $content = mui(".infoList")
 				for (var i=0;i<$title.length;i++) {
 					addEvent(i);
 				}
 				function addEvent(i){
 					$title[i].addEventListener("tap",function(){
-						alert(i)
+						removeClass();
+						$title[i].className = "selected";
+						$content[i].className="infoList selected"
 					})
+				}
+				function removeClass(){
+					for (var i=0;i<$title.length;i++) {
+						$title[i].className="";
+						$content[i].className="infoList"
+					}
 				}
 			}
 		</script>
