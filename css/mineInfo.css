@@ -12,13 +12,32 @@ color: #a1a19e;border-left: 1px #ccc solid;}
 .mineTitle p:first-child{border: none;}
 .mineTitle .selected{color: #a07d3f;}
 
-.mineInfo{float: left;width: 100%;background: rgba(255,255,255,0.5);margin-top: 10px;padding: 0 10px;}
-.mineInfo .infoList{display: none;}
+.mineInfo{float: left;width: 100%;margin-top: 10px;}
+.mineInfo .infoList{display: none;background: rgba(255,255,255,0.5);float: left;height: auto;
+width: 100%;padding: 0 10px;}
 .mineInfo .selected{display: block;}
 .mineInfo .infoList .list{width: 100%;height: 50px;line-height: 50px;float: left;border-bottom: 1px #ccc solid;}
 .mineInfo .infoList .list p{width: auto;display: block;float: left;color: #666666;font-size: 16px;padding-left: 10px;}
 .mineInfo .infoList .list span{width: auto;display: block;float: right;color: #666666;font-size: 16px;padding-right: 10px;}
-.mineInfo .infoList .list2box{width: 100%;float: left;background: rgba(255,255,255,0.5);}
+.mineInfo .infoList .list2box{width: 100%;float: left;}
 .mineInfo .infoList .list2box h1{font-size: 18px;font-size: 16px;color: #666;line-height: 40px;border-bottom: 1px #ccc solid;font-weight: 400;}
 .mineInfo .infoList .list2box h2{width: 33.3%;float: left;font-size: 16px;line-height: 40px;font-weight: 400;border-bottom: 1px #ccc solid;text-align: center;color: #666;}
 .mineInfo .infoList .list .redP{color: red;}
+.mineInfo .infoList .list3box{width: 100%;margin-top: 10px;border-bottom: 1px #ccc solid;background: rgba(255,255,255,0.5);
+padding: 0 10px;height: auto;float: left;}
+.mineInfo .infoList .list3box h1{color: #666;font-size: 16px;width: 100%;line-height: 50px;padding-left: 10px;
+font-weight: 400;border-bottom: 1px #ccc solid;}
+.mineInfo .infoList .list3box .all{border-bottom: 1px #ccc solid;}
+.mineInfo .infoList .list3box .all p{font-size: 14px;}
+.mineInfo .infoList .list3box div{float: left;width: 100%;height: 50px;padding:0 10px;}
+.mineInfo .infoList .list3box div input{float: left;display: block;height: 20px;width: 20px;margin-top: 15px;}
+.mineInfo .infoList .list3box div p{float: left;display: block;line-height: 50px;margin-left: 10px;font-size: 16px;color: #666;}
+.mineInfo .infoList .list3box div span{float: right;display: block;line-height: 50px;font-size: 16px;color: #666;}
+.mineInfo #infounBk{background: none !important;padding: 0;}
+
+.mineInfo .chartBox{float: left;margin-top: 20px;width: 100%;height: 300px;position: relative;}
+.mineInfo .chartBox h1{width: 100%;text-align: center;line-height: 40px;color: #666;font-size: 18px;top: 220px;position: absolute;}
+.mineInfo .chartBox h2{width: 100%;text-align: center;line-height: 40px;color: #666;font-size: 18px;top: 250px;position: absolute;}
+#gauge-ps{width: 50%;position: absolute;top: 20px;margin-left: 50%;left: -100px;}
+.mineInfo .chartBox1{height: 300px;}
+#gauge-ps1{width: 50%;position: absolute;top: 20px;margin-left: 50%;left: -100px;}

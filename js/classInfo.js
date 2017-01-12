@@ -27,6 +27,6 @@ window.onload = function(){
 	    }
 	    index+='</div>'		
 		jsonDom.innerHTML = index;
-		window.localStorage.aboutUs = JSON.stringify(data);
+		window.localStorage.classInfo = JSON.stringify(data);
 	}
 }

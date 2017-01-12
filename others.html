@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/other.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">健康优先-风险自测</h1>
+		</header>
+		<div class="mui-content">
+			<div class="banner">
+				<img src="img/1.jpg"/>
+			</div>
+		    <div class="ceshi">
+		    	<div class="list">
+		    		<h1>你的血压正常吗？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>有</label>
+						<input name="radio1" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>没有</label>
+						<input name="radio1" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你的血脂正常吗？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>正常</label>
+						<input name="radio2" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>不太好</label>
+						<input name="radio2" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你的血糖正常吗？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>正常</label>
+						<input name="radio3" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>不太好</label>
+						<input name="radio3" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>是否糖尿病？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>是</label>
+						<input name="radio4" type="radio" value="1"> 
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>没有</label>
+						<input name="radio4" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你是否吸烟？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>有</label>
+						<input name="radio5" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>没有</label>
+						<input name="radio5" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你的有氧运动量够吗？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>有</label>
+						<input name="radio6" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>没有</label>
+						<input name="radio6" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你有卒中家族史吗？ </h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<label>有</label>
+						<input name="radio7" type="radio" value="1">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>没有</label>
+						<input name="radio7" type="radio" value="2">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>您的心率?</h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<input type="number" class="xinlv">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你的身高?</h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<input type="number" class="shengao">
+					</div>
+		    	</div>
+		    	<div class="list">
+		    		<h1>你的体重?</h1>
+			    	<div class="mui-input-row mui-radio mui-left">
+						<input type="number" class="tizhong">
+					</div>
+		    	</div>
+		    	<div class="bottomBtn">
+			    	<h1></span>查看检测结果</h1>
+			    </div>
+		    	
+		    </div>
+		    <div class="result">
+		    	<p>风险自测结果</p>
+		    	<span>风险自</span>
+		    </div>
+		</div>
+		<div class="foot mui-bar">
+			<div><i class="iconfont icon-shouyeshouye"></i><h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i><h1>档案</h1></div>
+			<div><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
+			<div class="selected"><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var list = mui("input");
+				var num=0;
+				var sore=0;
+				mui(".bottomBtn")[0].addEventListener("tap",function(){
+					var xin = mui(".xinlv")[0].value;
+					if(parseInt(xin)<60 || parseInt(xin)>100){
+						sore+=1
+					}
+					var shengao = mui(".shengao")[0].value;
+					var tizhong = mui(".tizhong")[0].value;
+					var BMI = parseInt(tizhong)/parseInt(shengao)
+					if(xin == "" || shengao == "" || shengao == ""){
+						mui.toast("请填写完全部测试题");
+						return
+					}
+					console.log(xin+"++"+shengao+"++"+tizhong)
+					for (var i=0;i<list.length-3;i++) {
+						if(list[i].checked){
+							sore+=parseInt(list[i].value)
+							num++
+						}
+					}
+					if(num<7){
+						mui.toast("请填写完全部测试题");
+					}else{
+						mui(".ceshi")[0].style.display = "none";
+						mui(".result")[0].style.display = "block";
+						if(sore>10){
+							mui(".result span")[0].innerHTML = "您当前的风险较高，请改善生活方式！"
+						}else{
+							mui(".result span")[0].innerHTML = "您当前的风险较低，请继续保持良好的生活方式！"
+						}
+					}
+				})
+				
+			}
+		</script>
+	</body>
+
+</html>

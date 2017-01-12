@@ -53,6 +53,7 @@ function pulldownRefresh() {
 	statusFun(true);
 	function statusFun(bol){
 		if(bol){
+			getJsonAccess.cacheData(localStorage["infoArticle"],drawHtml,jsonDom);
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml1,jsonDom1);
 			setTimeout(function(){statusFun(false)},1000);
 		}else{

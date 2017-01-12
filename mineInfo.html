@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+	    <link rel="stylesheet" href="css/iconfont.css">
+	    <link rel="stylesheet" href="css/mineInfo.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		</header>
+		<div class="mui-content">
+		    <div class="mineHead">
+		    	<img src="img/doctorHead.jpg"/>
+		    	<h1>陈瑞芳</h1>
+		    </div>
+		    <div class="mineTitle">
+		    	<p class="selected">我的档案</p>
+		    	<p>脑公分</p>
+		    	<p>危险因素</p>
+		    	<p>建议处方</p>
+		    </div>
+		    <div class="mineInfo">
+		    	<div class="infoList selected">
+		    		<div class="list">
+		    			<p>性别</p>
+		    			<span>男</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>民族</p>
+		    			<span>汉</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>出生日期</p>
+		    			<span>1975-01-11</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>地址</p>
+		    			<span>福建省 福州市 鼓楼区 江南路564号</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>证件类型</p>
+		    			<span>身份证</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>证件号码</p>
+		    			<span>12345678912345678</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>联系电话</p>
+		    			<span>1234567891</span>
+		    		</div>
+		    		<div class="chartBox">
+		    			<canvas id="gauge-ps"></canvas>
+		    			<h1>危险(0分)-->健康(100分)</h1>
+		    			<h2>脑血管功能检测分值</h2>
+		    		</div>
+		    	</div>
+		    	<div class="infoList">
+		    		<div class="chartBox chartBox1">
+		    			<canvas id="gauge-ps1"></canvas>
+		    			<h1>您的积分值是77.5分，比上一积分值高了1分</h1>
+		    			<h2>脑血管功能受损，中风风险较高</h2>
+		    		</div>
+		    		<div class="list2box">
+		    			<h1>历史评估</h1>
+		    			<div>
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    			<div class="selected2">
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    			<div>
+		    				<h2>第一次评估</h2>
+		    				<h2>52.0分</h2>
+		    				<h2>2016-12-11</h2>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="infoList">
+		    		<div class="list">
+		    			<p>吸烟</p>
+		    			<span class="redP">有</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>饮酒</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑出血</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑梗死</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>吸烟</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>饮酒</p>
+		    			<span>无</span>
+		    		</div>
+		    		<div class="list">
+		    			<p>脑出血</p>
+		    			<span>无</span>
+		    		</div>
+		    		
+		    	</div>
+		    	<div class="infoList" id="infounBk">
+		    		<div class="list3box">
+		    			<h1>2017-01-01</h1>
+		    			<div class="all">
+		    				<input type="checkbox" name="Bike">
+		    				<p>药品名称</p><span>单价</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    		</div>
+		    		<div class="list3box">
+		    			<h1>2017-01-01</h1>
+		    			<div class="all">
+		    				<input type="checkbox" name="Bike">
+		    				<p>药品名称</p><span>单价</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    			<div>
+		    				<input type="checkbox" name="Bike">
+		    				<p>安神补脑片</p><span>￥35.00</span>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+		<div class="foot mui-bar">
+			<div><i class="iconfont icon-shouyeshouye"></i><h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i><h1>档案</h1></div>
+			<div><i class="iconfont icon-ketangpeixun"></i><h1>保健课堂</h1></div>
+			<div class="selected"><i class="iconfont icon-gerenzhongxin"></i><h1>我</h1></div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/gauge.min.js" ></script>
+		<script type="text/javascript" src="js/pageController.js" ></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var $title = mui(".mineTitle p");
+				var $content = mui(".infoList")
+				for (var i=0;i<$title.length;i++) {
+					addEvent(i);
+				}
+				function addEvent(i){
+					$title[i].addEventListener("tap",function(){
+						removeClass();
+						$title[i].className = "selected";
+						$content[i].className="infoList selected"
+					})
+				}
+				function removeClass(){
+					for (var i=0;i<$title.length;i++) {
+						$title[i].className="";
+						$content[i].className="infoList"
+					}
+				}
+				gaugePStart();
+				function gaugePStart(){
+					var gaugePS = new RadialGauge({
+					    renderTo: 'gauge-ps',
+					    width: 200,
+					    height: 200,
+					    units: '积分值',
+					    minValue: 0,
+					    maxValue: 100,
+					    majorTicks: [
+					        '0',
+					        '25',
+					        '50',
+					        '75',
+					        '100',
+					        
+					    ],
+					    minorTicks: 2,
+					    ticksAngle: 270,
+					    startAngle: 45,
+					    strokeTicks: true,
+					    highlights  : [
+					        { from : 0,  to :25, color : 'rgba(255,   255, 255, 0.5)' },
+							 { from : 25,  to :75, color : 'rgba(255,   255, 255, 0.5)' },
+					        { from : 75, to : 100, color : 'rgba(255,   255, 255, 0.75)' }
+					    ],
+					    valueInt: 1,
+					    valueDec: 0,
+					    colorPlate: "#fff",
+					    colorMajorTicks: "#686868",
+					    colorMinorTicks: "#686868",
+					    colorTitle: "#000",
+					    colorUnits: "#000",
+					    colorNumbers: "#686868",
+					    valueBox: true,
+					    colorValueText: "#000",
+					    colorValueBoxRect: "#fff",
+					    colorValueBoxRectEnd: "#fff",
+					    colorValueBoxBackground: "#fff",
+					    colorValueBoxShadow: false,
+					    colorValueTextShadow: false,
+					    colorNeedleShadowUp: true,
+					    colorNeedleShadowDown: false,
+					    colorNeedle: "rgba(200, 50, 50, .75)",
+					    colorNeedleEnd: "rgba(200, 50, 50, .75)",
+					    colorNeedleCircleOuter: "rgba(200, 200, 200, 1)",
+					    colorNeedleCircleOuterEnd: "rgba(200, 200, 200, 1)",
+					    borderShadowWidth: 0,
+					    borders: true,
+					    borderInnerWidth: 0,
+					    borderMiddleWidth: 0,
+					    borderOuterWidth: 5,
+					    colorBorderOuter: "#fafafa",
+					    colorBorderOuterEnd: "#cdcdcd",
+					    needleType: "arrow",
+					    needleWidth: 2,
+					    needleCircleSize: 7,
+					    needleCircleOuter: true,
+					    needleCircleInner: false,
+					    animationDuration: 1500,
+					    animationRule: "dequint",
+					    fontNumbers: "Verdana",
+					    fontTitle: "Verdana",
+					    fontUnits: "Verdana",
+					    fontValue: "Led",
+					    fontValueStyle: 'italic',
+					    fontNumbersSize: 20,
+					    fontNumbersStyle: 'italic',
+					    fontNumbersWeight: 'bold',
+					    fontTitleSize: 24,
+					    fontUnitsSize: 22,
+					    fontValueSize: 50,
+					    animatedValue: true
+					});
+					gaugePS.draw();
+					gaugePS.value = "77.5";
+					var gaugePS1 = new RadialGauge({
+					    renderTo: 'gauge-ps1',
+					    width: 200,
+					    height: 200,
+					    units: '积分值',
+					    minValue: 0,
+					    maxValue: 100,
+					    majorTicks: [
+					        '0',
+					        '25',
+					        '50',
+					        '75',
+					        '100',
+					        
+					    ],
+					    minorTicks: 2,
+					    ticksAngle: 270,
+					    startAngle: 45,
+					    strokeTicks: true,
+					    highlights  : [
+					        { from : 0,  to :25, color : 'rgba(255,   255, 255, 0.5)' },
+							 { from : 25,  to :75, color : 'rgba(255,   255, 255, 0.5)' },
+					        { from : 75, to : 100, color : 'rgba(255,   255, 255, 0.75)' }
+					    ],
+					    valueInt: 1,
+					    valueDec: 0,
+					    colorPlate: "#fff",
+					    colorMajorTicks: "#686868",
+					    colorMinorTicks: "#686868",
+					    colorTitle: "#000",
+					    colorUnits: "#000",
+					    colorNumbers: "#686868",
+					    valueBox: true,
+					    colorValueText: "#000",
+					    colorValueBoxRect: "#fff",
+					    colorValueBoxRectEnd: "#fff",
+					    colorValueBoxBackground: "#fff",
+					    colorValueBoxShadow: false,
+					    colorValueTextShadow: false,
+					    colorNeedleShadowUp: true,
+					    colorNeedleShadowDown: false,
+					    colorNeedle: "rgba(200, 50, 50, .75)",
+					    colorNeedleEnd: "rgba(200, 50, 50, .75)",
+					    colorNeedleCircleOuter: "rgba(200, 200, 200, 1)",
+					    colorNeedleCircleOuterEnd: "rgba(200, 200, 200, 1)",
+					    borderShadowWidth: 0,
+					    borders: true,
+					    borderInnerWidth: 0,
+					    borderMiddleWidth: 0,
+					    borderOuterWidth: 5,
+					    colorBorderOuter: "#fafafa",
+					    colorBorderOuterEnd: "#cdcdcd",
+					    needleType: "arrow",
+					    needleWidth: 2,
+					    needleCircleSize: 7,
+					    needleCircleOuter: true,
+					    needleCircleInner: false,
+					    animationDuration: 1500,
+					    animationRule: "dequint",
+					    fontNumbers: "Verdana",
+					    fontTitle: "Verdana",
+					    fontUnits: "Verdana",
+					    fontValue: "Led",
+					    fontValueStyle: 'italic',
+					    fontNumbersSize: 20,
+					    fontNumbersStyle: 'italic',
+					    fontNumbersWeight: 'bold',
+					    fontTitleSize: 24,
+					    fontUnitsSize: 22,
+					    fontValueSize: 50,
+					    animatedValue: true
+					});
+					gaugePS1.draw();
+					gaugePS1.value = "77.5";
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,4 +1,4 @@
-var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc"];
+var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc","mineInfo","others"];
 
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
@@ -15,6 +15,16 @@ if(mui(".foot div")[2]){
 		var webview = mui.openWindow({
 			url:pageName[3]+".html",
 			id :pageName[3],
+			extras:{
+			}
+		});
+	})
+}
+if(mui(".foot div")[3]){	
+	mui(".foot div")[3].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[13]+".html",
+			id :pageName[13],
 			extras:{
 			}
 		});
@@ -102,8 +112,17 @@ if(mui(".yuyue")[0]){
 		});
 	})
 }
-
-if(mui(".doctor")){
+if(mui(".risk")[0]){
+	mui(".risk")[0].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[14]+".html",
+			id :pageName[14],
+			extras:{
+			}
+		});
+	})
+}
+if(mui(".doctor")[0]){
 	for(var i=0;i<mui(".doctor").length;i++){
 		addEventD(i);
 	}
