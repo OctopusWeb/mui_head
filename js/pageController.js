@@ -70,7 +70,17 @@ if(mui(".detect")[0]){
 			}
 		});
 	})
-}	
+}
+if(mui(".bottomBtn1")[0]){	
+	mui(".bottomBtn1")[0].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[7]+".html",
+			id :pageName[7],
+			extras:{
+			}
+		});
+	})
+}
 if(mui(".consult")[0]){	
 	mui(".consult")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
@@ -159,16 +169,16 @@ function addEventR(num){
 		});
 	})
 }
-if(mui(".video")){
-	for(var i=0;i<mui(".video").length;i++){
+if(mui(".videoBox")){
+	for(var i=0;i<mui(".videoBox").length;i++){
 		addEventV(i);
 	}
 }
 
 function addEventV(num){
-	mui(".video")[num].addEventListener("tap",function(){
-		window.localStorage.doctorId = mui(".video")[num].id;
-		console.log(localStorage["video"])
+	mui(".videoBox")[num].addEventListener("tap",function(){
+		window.localStorage.videoId = mui(".videoBox")[num].id;
+		console.log(localStorage["videoId"])
 		var webview = mui.openWindow({
 			url:pageName[10]+".html",
 			id :pageName[10],
@@ -219,6 +229,28 @@ getJsonAccess.getJson = function(url,data,onComplete){
 		}
 	}
 	xhr.open( "GET",pubUrl+url);
+	xhr.send();
+}
+getJsonAccess.postJson = function(url,data,onComplete,value){
+	url = url+data;
+	console.log(pubUrl+url)
+	var xhr = new plus.net.XMLHttpRequest();
+	xhr.onreadystatechange = function () {
+		switch ( xhr.readyState ) {
+			
+			case 4:
+				if ( xhr.status == 200 ) { 
+					onComplete(xhr.responseText)
+				} else {
+					mui.toast( "xhr请求失败："+xhr.readyState );
+				}
+				break;
+			default :
+				break;
+		}
+	}
+	xhr.open( "POST",pubUrl+url);
+	var data=value;
 	xhr.send();
 }
 

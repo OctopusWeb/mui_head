@@ -21,7 +21,7 @@ function pulldownRefresh() {
 	setTimeout(function() {
 			type = true;
 			statusFun1(2,5);
-			page = 0;
+			page = 0; 
 			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 		}, 1500);
 	}
@@ -35,29 +35,21 @@ function pulldownRefresh() {
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 		}, 1500);
 	}
-	if (mui.os.plus) {
-		mui.plusReady(function() {
-			setTimeout(function() {
-				mui('#pullrefresh').pullRefresh().pullupLoading();
-			}, 1000);
-
-		});
-	} else {
-		mui.ready(function() {
-			mui('#pullrefresh').pullRefresh().pullupLoading();
-		});
-	}
 	
 	var jsonDom = mui(".room-list")[0];
 	var jsonDom1 = mui("#banner")[0];
-	statusFun(true);
-	function statusFun(bol){
+	statusFun(true,false);
+	function statusFun(bol,page){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["infoArticle"],drawHtml,jsonDom);
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml1,jsonDom1);
-			setTimeout(function(){statusFun(false)},1000);
+			setTimeout(function(){statusFun(false,page)},1000);
 		}else{
-			var data = '?apk='+localStorage["apk"]+'&type=bjkt'+"&pgSize="+1+"&pgCur="+5
+			if(page){
+				var data = '?apk='+localStorage["apk"]+'&type=bjkt'+"&pgSize="+page+"&pgCur="+5
+			}else{
+				var data = '?apk='+localStorage["apk"]+'&type=bjkt'
+			}
 			getJsonAccess.getJson('nzf2/s/info_articles',data,drawHtml);
 			var data1 = "?apk="+localStorage["apk"]
 			getJsonAccess.getJson('nzf2/s/info_banners',data1,drawHtml1);

@@ -125,6 +125,9 @@
 		    <div class="result">
 		    	<p>风险自测结果</p>
 		    	<span>风险自</span>
+		    	<div class="bottomBtn1">
+			    	<h1></span>查找检测点</h1>
+			    </div>
 		    </div>
 		</div>
 		<div class="foot mui-bar">
@@ -152,20 +155,20 @@
 						mui.toast("请填写完全部测试题");
 						return
 					}
-					console.log(xin+"++"+shengao+"++"+tizhong)
 					for (var i=0;i<list.length-3;i++) {
 						if(list[i].checked){
 							sore+=parseInt(list[i].value)
 							num++
 						}
 					}
+					console.log(sore)
 					if(num<7){
 						mui.toast("请填写完全部测试题");
 					}else{
 						mui(".ceshi")[0].style.display = "none";
 						mui(".result")[0].style.display = "block";
 						if(sore>10){
-							mui(".result span")[0].innerHTML = "您当前的风险较高，请改善生活方式！"
+							mui(".result span")[0].innerHTML = "您当前存在中风的风险，请尽快参加脑功分筛查"
 						}else{
 							mui(".result span")[0].innerHTML = "您当前的风险较低，请继续保持良好的生活方式！"
 						}

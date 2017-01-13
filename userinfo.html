@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/mineInfo.css" />
+		<style>
+			.mui-table-view {
+				background: rgba(255, 255, 255, .6);
+			}
+			
+			.mui-table-view-cell>a:not(.mui-btn) {
+				color: #666;
+			}
+			.mui-grid-view.mui-grid-9{background: rgba(255, 255, 255, .6);}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康优先-个人中心</h1>
+			<a class="mui-action-back mui-icon mui-icon-gear-filled mui-pull-right"></a>
+		</header>
+		<div class="mui-content" style="padding-top: 280px;">
+			<div class="mineHead">
+				<img src="img/image.png" />
+				<h1>陈瑞芳</h1>
+			</div>
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="margin-bottom: 8px;">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" id="archives">
+					<a href="#">
+						<span class="mui-icon" style="width: 50px;height:50px;background:url(img/mine1.png) no-repeat;background-size: 100%;background-position: center;"></span>
+						<div class="mui-media-body">我的档案</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<span class="mui-icon" style="width: 50px;height:50px;background:url(img/mine2.png) no-repeat;background-size: 100%;background-position: center;"></span>
+						<div class="mui-media-body">我的收藏</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<span class="mui-icon" style="width: 50px;height:50px;background:url(img/mine3.png) no-repeat;background-size: 100%;background-position: center;"></span>
+						<div class="mui-media-body">我的优惠券</div>
+					</a>
+				</li>
+			</ul>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							我的脑攻分
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							填写实施记录表
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							其他危险因素
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							专家预约记录
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							我的建议处方
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							联系客服
+						</a>
+					</li>
+				</ul>
+		</div>
+		<div class="foot mui-bar">
+			<div><i class="iconfont icon-shouyeshouye"></i>
+				<h1>首页</h1></div>
+			<div><i class="iconfont icon-dangan"></i>
+				<h1>档案</h1></div>
+			<div><i class="iconfont icon-ketangpeixun"></i>
+				<h1>保健课堂</h1></div>
+			<div class="selected"><i class="iconfont icon-gerenzhongxin"></i>
+				<h1>我</h1></div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/gauge.min.js"></script>
+		<script type="text/javascript" src="js/pageController.js"></script>
+		<script>
+			document.getElementById("archives").addEventListener("tap",function(){
+				var webview = mui.openWindow({
+					url:"mineInfo.html",
+					id :"mineInfo",
+				});
+			})
+		</script>
+	</body>
+
+</html>

@@ -6,13 +6,9 @@ window.onload = function(){
 	
 	
 	mui(".bottomBtn")[0].addEventListener("tap",function(){
-		var type = mui(".type")[0].value;
 		var content = mui(".content")[0].value;
 		var img = mui(".askPic ul li");
-		if(type=="" || type == null || type == undefined || type == "undefined"){
-			 mui.toast('类型不能为空',{ duration:'long', type:'div' }) 
-			 return
-		}else if(content=="" || content == null || content == undefined || content == "undefined"){
+		if(content=="" || content == null || content == undefined || content == "undefined"){
 			mui.toast('内容不能为空',{ duration:'long', type:'div' }) 
 			return
 		}else {
@@ -22,12 +18,12 @@ window.onload = function(){
 	})
 	var jsonDom = mui(".room-list")[0];
 	function statusFun(type,content,img){
-		var data = '?apk='+localStorage["apk"]+'&uid=1'+"&ucd=1"+"&type="+type+"&content="+content;
+		var data = '?apk='+localStorage["apk"]+'&uid=1'+"&ucd=1"+"&content="+content;
 		for (var i=1;i<img.length;i++) {
 			var img64 = getBase64Image(img[i].getElementsByTagName("img")[0]);
 			data+="&img"+img64;
 		}
-		getJsonAccess.getJson('/s/question_submit',data,drawHtml);
+		getJsonAccess.getJson('nzf2/s/question_submit',data,drawHtml);
 	}
 
 	function drawHtml(data){

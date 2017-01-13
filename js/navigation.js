@@ -19,8 +19,11 @@ window.onload = function(){
 	var type = false;
 	statusFun(true,1);
 	search.addEventListener("change",function(){
-		var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&name='+search.value+'&city='+selected.value;
-		getJsonAccess.getJson('nzf2/s/jcd_lists',data,drawHtml);
+//		var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&name='+search.value+'&city='+selected.value;
+		type = true;
+		var data = '?apk='+localStorage["apk"];
+		var value = {name:search.value}
+		getJsonAccess.postJson('nzf2/s/jcd_lists',data,drawHtml,value);
 	})	
 	function pulldownRefresh() {
 		setTimeout(function() {
@@ -59,7 +62,8 @@ window.onload = function(){
 			getJsonAccess.cacheData(localStorage["navigation"],drawHtml,jsonDom);
 			setTimeout(function(){statusFun(false,pages)},1000);
 		}else{
-			var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&pgSize=5&pgCur='+pages
+//			var data = '?apk='+localStorage["apk"]+'&x'+localStorage["latitude"]+'&y='+localStorage["longitude"]+'&pgSize=5&pgCur='+pages
+			var data = '?apk='+localStorage["apk"]+'&pgSize=5&pgCur='+pages
 			getJsonAccess.getJson('nzf2/s/jcd_lists',data,drawHtml);
 		}
 	}
@@ -74,8 +78,10 @@ window.onload = function(){
 		}
 		
 		for (var i=0;i<json.length;i++) {
-			index+='<div class="hos" id="'+json[i].id+'"><h1>'+json[i].name+'</h1><h2>'+json[i].honor+'</h2><h2>'+json[i].type
-			index+='</h2><h2><i class="icon-dingwei iconfont"></i>'+json[i].dist+'</h2></div>'
+			if(json[i].id && json[i].name && json[i].honor){
+				index+='<div class="hos" id="'+json[i].id+'"><h1>'+json[i].name+'</h1><h2>'+json[i].honor+'</h2><h2>'+json[i].type
+				index+='</h2><h2><i class="icon-dingwei iconfont"></i>'+json[i].name+'</h2></div>'
+			}
 		}
 		jsonDom.innerHTML = index;
 		for(var i=0;i<mui(".hos").length;i++){

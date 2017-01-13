@@ -13,7 +13,7 @@ $.ready(function() {
 			setTimeout(function(){statusFun(false,pages)},1000);
 		}else{
 			var data1 = '?apk='+localStorage["apk"]+'&pgSize=5&pgCur='+pages;
-			var data2 = '?apk='+localStorage["apk"]+'&uid=f987daf32af145308deb4ac4db777119'+'&pgSize=5&pgCur='+pages
+			var data2 = '?apk='+localStorage["apk"]+'&pgSize=5&pgCur='+pages;
 			getJsonAccess.getJson('nzf2/s/question_lists',data1,drawHtml1);
 			getJsonAccess.getJson('nzf2/s/question_lists',data2,drawHtml2);
 		}

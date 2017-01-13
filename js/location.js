@@ -4,7 +4,7 @@ window.onload = function(){
 	statusFun(true);
 	function statusFun(bol){
 		if(bol){
-			getJsonAccess.cacheData(localStorage["location"],drawHtml,jsonDom);
+			getJsonAccess.cacheData(localStorage["locations"],drawHtml,jsonDom);
 			setTimeout(function(){statusFun(false)},1000);
 		}else{
 			var data = "?apk="+localStorage["apk"]+'&id='+localStorage["hosId"];
@@ -22,7 +22,7 @@ window.onload = function(){
 		index+='<div class="btn"><h2>查看地图</h2><h2>我要预约</h2></div>'
 		jsonDom.innerHTML = index;
 		addMap(json.x,json.y,json.name)
-		window.localStorage.location = JSON.stringify(data);
+		window.localStorage.locations = JSON.stringify(data);
 	}
 	
 	function addMap(x,y,name){

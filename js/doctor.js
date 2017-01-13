@@ -17,8 +17,10 @@ window.onload = function(){
 	var jsonDom = mui(".doctor-list")[0];
 	var search = mui(".search")[0];
 	search.addEventListener("change",function(){
-		var data = '?apk='+localStorage["apk"]+"&dname="+search.value+'&pgSize=5&pgCur='+1;
-		getJsonAccess.getJson('nzf2/s/dr_lists',data,drawHtml);
+		type = true; 
+		var data = '?apk='+localStorage["apk"]+'&pgSize=5&pgCur=1';
+		var value = {name:search.value}
+		getJsonAccess.postJson('nzf2/s/dr_lists',data,drawHtml,value);		
 	})
 	statusFun(true,1);
 	function pulldownRefresh() {
@@ -39,18 +41,7 @@ window.onload = function(){
 				mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 		}, 500);
 	}
-	if (mui.os.plus) {
-		mui.plusReady(function() {
-			setTimeout(function() {
-				mui('#pullrefresh').pullRefresh().pullupLoading();
-			}, 1000);
-	
-		});
-	} else {
-		mui.ready(function() {
-			mui('#pullrefresh').pullRefresh().pullupLoading();
-		});
-	}
+
 	function statusFun(bol,pages){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["doctor"],drawHtml,jsonDom);
@@ -64,7 +55,7 @@ window.onload = function(){
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
 		var json = data.datas.rds;
-		if(type){
+		if(type || page == 1){ 
 			var index=""
 		}else{
 			var index=jsonDom.innerHTML;
