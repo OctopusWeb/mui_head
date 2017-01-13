@@ -18,20 +18,21 @@ window.onload = function(){
 		localStorage.doctorPic = json.photo;
 		localStorage.doctorName = json.name;
 		localStorage.doctorHonor = json.honor;
-		var index='<div class="doctorHead"><img src="'+json.photo+'"/><h1>'+json.name+
+		var index='<div class="doctorHead"><div class="hinner"><img src="'+json.photo+'"/></div><h1>'+json.name+
 					'</h1><h2>'+json.honor+'</h2> </div><div class="doctorInfo">'+
 					'<i class="icon-shoucang iconfont"></i><h1>医生简介</h1><p>'+
-					json.intro+'</p></div><div class="bottomBtn"><h1 class="yuyue">'+
-					'<span class="mui-icon mui-icon-chat"></span>我要预约</h1></div>'
+					json.intro+'</p>'
+//					</div><div class="bottomBtn"><h1 class="yuyue">'
+//					'<span class="mui-icon mui-icon-chat"></span>我要1预约</h1></div>'
 		jsonDom.innerHTML = index;
-		mui(".yuyue")[0].addEventListener("tap",function(){
-			var webview = mui.openWindow({
-				url:pageName[12]+".html",
-				id :pageName[12],
-				extras:{
-				}
-			});
-		})
+//		mui(".yuyue")[0].addEventListener("tap",function(){
+//			var webview = mui.openWindow({
+//				url:pageName[12]+".html",s
+//				id :pageName[12],
+//				extras:{
+//				}
+//			});
+//		})
 		window.localStorage.doctorInfo = JSON.stringify(data);
 	}
 }

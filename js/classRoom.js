@@ -19,9 +19,8 @@ window.onload = function(){
 }
 function pulldownRefresh() {
 	setTimeout(function() {
-			type = true;
-			statusFun1(2,5);
-			page = 0; 
+			page = 1; 
+			statusFun1(5,page);
 			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 		}, 1500);
 	}
@@ -30,26 +29,21 @@ function pulldownRefresh() {
 	 */
 	function pullupRefresh() {
 		setTimeout(function() {
-			type = false;
-			statusFun1(page++,5);
+			statusFun1(5,++page);
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 		}, 1500);
 	}
 	
 	var jsonDom = mui(".room-list")[0];
 	var jsonDom1 = mui("#banner")[0];
-	statusFun(true,false);
+	statusFun(true,page);
 	function statusFun(bol,page){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["infoArticle"],drawHtml,jsonDom);
 			getJsonAccess.cacheData(localStorage["banner"],drawHtml1,jsonDom1);
 			setTimeout(function(){statusFun(false,page)},1000);
 		}else{
-			if(page){
-				var data = '?apk='+localStorage["apk"]+'&type=bjkt'+"&pgSize="+page+"&pgCur="+5
-			}else{
-				var data = '?apk='+localStorage["apk"]+'&type=bjkt'
-			}
+			var data = '?apk='+localStorage["apk"]+'&type=bjkt'+"&pgSize="+5+"&pgCur="+page
 			getJsonAccess.getJson('nzf2/s/info_articles',data,drawHtml);
 			var data1 = "?apk="+localStorage["apk"]
 			getJsonAccess.getJson('nzf2/s/info_banners',data1,drawHtml1);
@@ -63,7 +57,7 @@ function pulldownRefresh() {
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
 		var json = data.datas.rds;
-		if(type){
+		if(page == 1){
 			var index=""
 		}else{
 			var index = jsonDom.innerHTML;

@@ -17,19 +17,19 @@
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		    <h1 class="mui-title">健康优先-风险自测</h1>
 		</header>
-		<div class="mui-content">
+		<div class="mui-content" style="padding-bottom: 50px;">
 			<div class="banner">
-				<img src="img/1.jpg"/>
+				<img src="img/ceshi.jpg"/>
 			</div>
 		    <div class="ceshi">
 		    	<div class="list">
 		    		<h1>你的血压正常吗？ </h1>
 			    	<div class="mui-input-row mui-radio mui-left">
-						<label>有</label>
+						<label>正常</label>
 						<input name="radio1" type="radio" value="1">
 					</div>
 					<div class="mui-input-row mui-radio mui-left">
-						<label>没有</label>
+						<label>不太好</label>
 						<input name="radio1" type="radio" value="2">
 					</div>
 		    	</div>
@@ -62,7 +62,7 @@
 						<input name="radio4" type="radio" value="1"> 
 					</div>
 					<div class="mui-input-row mui-radio mui-left">
-						<label>没有</label>
+						<label>否</label>
 						<input name="radio4" type="radio" value="2">
 					</div>
 		    	</div>
@@ -73,18 +73,18 @@
 						<input name="radio5" type="radio" value="1">
 					</div>
 					<div class="mui-input-row mui-radio mui-left">
-						<label>没有</label>
+						<label>否</label>
 						<input name="radio5" type="radio" value="2">
 					</div>
 		    	</div>
 		    	<div class="list">
 		    		<h1>你的有氧运动量够吗？ </h1>
 			    	<div class="mui-input-row mui-radio mui-left">
-						<label>有</label>
+						<label>够</label>
 						<input name="radio6" type="radio" value="1">
 					</div>
 					<div class="mui-input-row mui-radio mui-left">
-						<label>没有</label>
+						<label>不够</label>
 						<input name="radio6" type="radio" value="2">
 					</div>
 		    	</div>
@@ -161,13 +161,12 @@
 							num++
 						}
 					}
-					console.log(sore)
 					if(num<7){
 						mui.toast("请填写完全部测试题");
 					}else{
 						mui(".ceshi")[0].style.display = "none";
 						mui(".result")[0].style.display = "block";
-						if(sore>10){
+						if(sore>3){
 							mui(".result span")[0].innerHTML = "您当前存在中风的风险，请尽快参加脑功分筛查"
 						}else{
 							mui(".result span")[0].innerHTML = "您当前的风险较低，请继续保持良好的生活方式！"

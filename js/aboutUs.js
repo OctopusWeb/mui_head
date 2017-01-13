@@ -10,7 +10,7 @@ window.onload = function(){
 	});
 	
 	var jsonDom = mui("#banner")[0];
-	statusFun(true);
+//	statusFun(true);
 	function statusFun(bol){
 		if(bol){
 			getJsonAccess.cacheData(localStorage["aboutUs"],drawHtml,jsonDom);

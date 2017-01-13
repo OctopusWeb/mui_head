@@ -13,7 +13,7 @@ window.onload = function(){
 	});
 
 	var page=1;
-	var type = false;
+	var type = true;
 	var jsonDom = mui(".doctor-list")[0];
 	var search = mui(".search")[0];
 	search.addEventListener("change",function(){
@@ -37,7 +37,7 @@ window.onload = function(){
 	function pullupRefresh() {
 		setTimeout(function() {
 				type = false;
-				statusFun(false,page++);
+				statusFun(false,++page);
 				mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 		}, 500);
 	}
@@ -55,7 +55,7 @@ window.onload = function(){
 	function drawHtml(data){
 		if(typeof(data) == "string"){data = JSON.parse(data)}
 		var json = data.datas.rds;
-		if(type || page == 1){ 
+		if(type){ 
 			var index=""
 		}else{
 			var index=jsonDom.innerHTML;

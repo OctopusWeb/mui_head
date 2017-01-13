@@ -40,7 +40,7 @@ window.onload = function(){
 	function pullupRefresh() {
 		setTimeout(function() {
 			type = false;
-			statusFun(false,page++);
+			statusFun(false,++page);
 			mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 		}, 1500);
 	}

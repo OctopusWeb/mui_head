@@ -1,10 +1,20 @@
-var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc","mineInfo","others"];
+var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc","mineInfo","others","userinfo"];
 
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
 			url:pageName[0]+".html",
 			id :pageName[0],
+			extras:{
+			}
+		});
+	});
+}
+if(mui(".foot div")[1]){
+	mui(".foot div")[1].addEventListener("tap",function(){
+		var webview = mui.openWindow({
+			url:pageName[13]+".html",
+			id :pageName[13],
 			extras:{
 			}
 		});
@@ -23,8 +33,8 @@ if(mui(".foot div")[2]){
 if(mui(".foot div")[3]){	
 	mui(".foot div")[3].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[13]+".html",
-			id :pageName[13],
+			url:pageName[15]+".html",
+			id :pageName[15],
 			extras:{
 			}
 		});

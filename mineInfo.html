@@ -22,13 +22,13 @@
 		    	<h1>陈瑞芳</h1>
 		    </div>
 		    <div class="mineTitle">
-		    	<p class="selected">我的档案</p>
-		    	<p>脑公分</p>
+		    	<p class="">我的档案</p>
+		    	<p>脑功分</p>
 		    	<p>危险因素</p>
 		    	<p>建议处方</p>
 		    </div>
 		    <div class="mineInfo">
-		    	<div class="infoList selected">
+		    	<div class="infoList ">
 		    		<div class="list">
 		    			<p>性别</p>
 		    			<span>男</span>
@@ -177,6 +177,13 @@
 				for (var i=0;i<$title.length;i++) {
 					addEvent(i);
 				}
+				
+				function init(){
+					removeClass();
+					var num = localStorage["mineTap"]
+					$title[num].className = "selected";
+					$content[num].className="infoList selected"
+				}
 				function addEvent(i){
 					$title[i].addEventListener("tap",function(){
 						removeClass();
@@ -266,6 +273,7 @@
 					});
 					gaugePS.draw();
 					gaugePS.value = "77.5";
+					setTimeout(init,1500)
 					var gaugePS1 = new RadialGauge({
 					    renderTo: 'gauge-ps1',
 					    width: 200,

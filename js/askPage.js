@@ -12,12 +12,12 @@ window.onload = function(){
 			mui.toast('内容不能为空',{ duration:'long', type:'div' }) 
 			return
 		}else {
-			statusFun(type,content,img)
+			statusFun(content,img)
 		}
 		
 	})
 	var jsonDom = mui(".room-list")[0];
-	function statusFun(type,content,img){
+	function statusFun(content,img){
 		var data = '?apk='+localStorage["apk"]+'&uid=1'+"&ucd=1"+"&content="+content;
 		for (var i=1;i<img.length;i++) {
 			var img64 = getBase64Image(img[i].getElementsByTagName("img")[0]);

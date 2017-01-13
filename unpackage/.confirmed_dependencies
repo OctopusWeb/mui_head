@@ -1,1 +1,209 @@
-null
+{
+	"index.html": {
+		"resources": [
+			"img/banner.png",
+			"img/menu2.png",
+			"css/style.css",
+			"img/menu1.png",
+			"img/menu5.png",
+			"js/pageController.js",
+			"img/bkImg.jpg",
+			"css/index.css",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"img/menu6.png",
+			"css/iconfont.woff",
+			"img/menu3.png",
+			"img/menu4.png",
+			"js/index.js",
+			"img/noneImg.png"
+		],
+		"refer": [
+			"others.html",
+			"doctor.html",
+			"userinfo.html",
+			"classRoom.html",
+			"navigation.html",
+			"consult.html",
+			"vip.html",
+			"aboutUs.html",
+			"mineInfo.html"
+		]
+	},
+	"others.html": {
+		"resources": [
+			"img/ceshi.jpg",
+			"fonts/mui.ttf",
+			"css/other.css",
+			"js/mui.min.js",
+			"img/1.jpg",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.woff",
+			"img/bkImg.jpg",
+			"js/pageController.js"
+		],
+		"refer": [
+			"navigation.html",
+			"classRoom.html",
+			"index.html"
+		]
+	},
+	"navigation.html": {
+		"resources": [
+			"css/navigation.css",
+			"js/navigation.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.woff",
+			"img/bkImg.jpg",
+			"js/pageController.js"
+		],
+		"refer": []
+	},
+	"doctor.html": {
+		"resources": [
+			"css/doctor.css",
+			"js/doctor.js",
+			"js/mui.min.js",
+			"js/pageController.js"
+		],
+		"refer": [
+			"doctorInfo.html"
+		]
+	},
+	"doctorInfo.html": {
+		"resources": [
+			"css/doctorInfo.css",
+			"js/doctorInfo.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.woff",
+			"img/bkImg.jpg",
+			"js/pageController.js"
+		],
+		"refer": []
+	},
+	"userinfo.html": {
+		"resources": [
+			"img/mine1.png",
+			"js/gauge.min.js",
+			"fonts/mui.ttf",
+			"css/style.css",
+			"img/mine3.png",
+			"js/pageController.js",
+			"img/bkImg.jpg",
+			"css/mineInfo.css",
+			"img/image.png",
+			"js/mui.min.js",
+			"img/mine2.png",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/iconfont.woff"
+		],
+		"refer": [
+			"mineInfo.html"
+		]
+	},
+	"mineInfo.html": {
+		"resources": [
+			"js/gauge.min.js",
+			"img/image.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.woff",
+			"img/bkImg.jpg",
+			"js/pageController.js",
+			"css/mineInfo.css"
+		],
+		"refer": [
+			"index.html",
+			"classRoom.html"
+		]
+	},
+	"classRoom.html": {
+		"resources": [
+			"css/classRoom.css",
+			"img/2.jpg",
+			"img/4.jpg",
+			"img/3.jpg",
+			"js/classRoom.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/style.css",
+			"js/pageController.js",
+			"img/bkImg.jpg",
+			"img/1.jpg",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"img/noneImg.png"
+		],
+		"refer": []
+	},
+	"consult.html": {
+		"resources": [
+			"js/mui.pullToRefresh.js",
+			"js/consult.js",
+			"js/mui.pullToRefresh.material.js",
+			"css/consult.css",
+			"img/doctorHead.jpg",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"askPage.html"
+		]
+	},
+	"askPage.html": {
+		"resources": [
+			"css/askPage.css",
+			"img/add.png",
+			"js/askPage.js"
+		],
+		"refer": []
+	},
+	"vip.html": {
+		"resources": [
+			"css/vip.css",
+			"js/vip.js"
+		],
+		"refer": [
+			"videoInfo.html"
+		]
+	},
+	"videoInfo.html": {
+		"resources": [
+			"js/vedioInfo.js",
+			"css/videoInfo.css"
+		],
+		"refer": []
+	},
+	"aboutUs.html": {
+		"resources": [
+			"js/mui.min.js",
+			"img/welcome.png",
+			"js/aboutUs.js",
+			"css/about.css",
+			"img/welcome1.png",
+			"js/pageController.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/style.css",
+			"css/iconfont.woff",
+			"img/bkImg.jpg"
+		],
+		"refer": [
+			"classRoom.html"
+		]
+	}
+}
