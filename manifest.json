@@ -385,7 +385,15 @@
 			"location.html": {
 				"resources": [
 					"css/location.css",
-					"js/location.js"
+					"js/location.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"css/style.css",
+					"img/bkImg.jpg",
+					"js/pageController.js",
+					"img/noneImg.png"
 				],
 				"refer": [],
 				"priority": 0

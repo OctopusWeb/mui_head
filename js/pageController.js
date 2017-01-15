@@ -74,8 +74,8 @@ if(mui(".teach")[0]){
 if(mui(".detect")[0]){	
 	mui(".detect")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[7]+".html",
-			id :pageName[7],
+			url:pageName[8]+".html",
+			id :pageName[8],
 			extras:{
 			}
 		});
@@ -92,20 +92,22 @@ if(mui(".bottomBtn1")[0]){
 	})
 }
 if(mui(".consult")[0]){	
+	
 	mui(".consult")[0].addEventListener("tap",function(){
-		var webview = mui.openWindow({
-			url:pageName[4]+".html",
-			id :pageName[4],
-			extras:{
-			}
-		});
+		mui.toast("正在筹备中，请等待")
+//		var webview = mui.openWindow({
+//			url:pageName[4]+".html",
+//			id :pageName[4],
+//			extras:{
+//			}
+//		});
 	})
 }	
 if(mui(".consult")[1]){
 	mui(".consult")[1].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[8]+".html",
-			id :pageName[8],
+			url:pageName[4]+".html",
+			id :pageName[4],
 			extras:{
 			}
 		});
