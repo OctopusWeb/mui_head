@@ -16,3 +16,11 @@ margin-left: 10%;color: #fff;margin-top: 20px;margin-bottom: 20px;}
 .result{width: 90%;background: #fff;height: 200px;float: left;margin-left: 5%;margin-top: 10px;display: none;}
 .result p{width: 100%;text-align: center;line-height: 50px;font-size: 24px;color: #666;margin-top: 30px;}
 .result span{width: 100%;text-align: center;color: red;display: block;}
+
+.mui-content{background: none;}
+.content{width: 100%;float: left;position: relative;}
+.content img{width: 100%;float: left;}
+.content h1{font-size: 24px;color: #000;font-family: "黑体";width: 100%;text-align: center;line-height: 60px;margin: 0;font-weight: 400;}
+.content p{width: 90%;float: left;margin-left: 5%;font-size: 16px;color: #000;line-height: 30px;}
+.content h2{width: 100%;padding:10px 5%;font-size: 18px;line-height: 30px;float: left;margin: 0;}
+.content h3{width: 100%;padding:10px 5%;font-size: 16px;line-height: 30px;float: left;margin: 0;}

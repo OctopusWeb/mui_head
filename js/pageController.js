@@ -137,8 +137,8 @@ if(mui(".yuyue")[0]){
 if(mui(".risk")[0]){
 	mui(".risk")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[16]+".html",
-			id :pageName[16],
+			url:pageName[14]+".html",
+			id :pageName[14],
 			extras:{
 			}
 		});
