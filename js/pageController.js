@@ -1,5 +1,4 @@
-var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc","mineInfo","others","userinfo"];
-
+var pageName = ["index","aboutUs","askPage","classRoom","consult","doctor","doctorInfo","navigation","vip","classInfo","videoInfo","location","order_doc","mineInfo","others","userinfo","strokeContent"];
 if(mui(".foot div")[0]){
 	mui(".foot div")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
@@ -12,6 +11,7 @@ if(mui(".foot div")[0]){
 }
 if(mui(".foot div")[1]){
 	mui(".foot div")[1].addEventListener("tap",function(){
+		localStorage.mineTap=0;
 		var webview = mui.openWindow({
 			url:pageName[13]+".html",
 			id :pageName[13],
@@ -137,8 +137,8 @@ if(mui(".yuyue")[0]){
 if(mui(".risk")[0]){
 	mui(".risk")[0].addEventListener("tap",function(){
 		var webview = mui.openWindow({
-			url:pageName[14]+".html",
-			id :pageName[14],
+			url:pageName[16]+".html",
+			id :pageName[16],
 			extras:{
 			}
 		});
